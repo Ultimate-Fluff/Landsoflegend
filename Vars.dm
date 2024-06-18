@@ -18,7 +18,7 @@ mob
 
 		Bleed = null
 		BleedLast = 0
-		BloodWallColour = null
+		BloodWallColor = null
 
 		Pain = 0
 		Fainted = 0
@@ -507,7 +507,7 @@ atom
 
 		Type = null
 
-		Defence = 0
+		Defense = 0
 
 		Weight = 0
 		WeightMax = 0
@@ -520,7 +520,7 @@ atom
 		Race = null
 
 		DamageType = null
-		DefenceType = null
+		DefenseType = null
 
 		Dura = 0
 		MaxDura = 0
@@ -584,10 +584,10 @@ atom
 		tmp/Controlling = null
 		tmp/UnderTK = null //1 if the person is being controlled by TK.
 
-		BloodColour = null
+		BloodColor = null
 obj
 	var
-		BodysKey = null
+		BodiesKey = null
 
 		EquipState = null
 		CarryState = null
@@ -753,7 +753,7 @@ atom
 											A.Burn(Dis)
 											if(ismob(A))
 												var/mob/M = A
-												M.CheckFlamable()
+												M.CheckFlammable()
 			else
 				src.overlays -= /obj/Misc/Fire/
 				src.overlays -= /obj/Misc/FireLarge/

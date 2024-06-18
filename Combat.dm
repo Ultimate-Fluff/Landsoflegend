@@ -66,7 +66,11 @@ mob
 					T.Move(src)
 				for(var/atom/a in range(0,src))
 					if(a.density && a != src)
+<<<<<<< Updated upstream
 						view(src) << "<font color = red>[src] slams into [a]!<br>"
+=======
+						view(src) << "<font color = red>[src] slams into The [a]!<br>"
+>>>>>>> Stashed changes
 						src.Pain += rand(15,25)
 						if(src.Weapon)
 							var/Drop = prob(100 - src.Agility * 1.5)
@@ -183,15 +187,15 @@ mob
 				for(var/turf/Walls/W in range(1,src))
 					var/Splat = prob(10)
 					if(Splat)
-						if(src.BloodColour)
-							var/obj/BS = new src.BloodWallColour()
+						if(src.BloodColor)
+							var/obj/BS = new src.BloodWallColor()
 							BS.Move(locate(W.x,W.y,W.z))
 				for(var/turf/Floors/F in range(0,src))
 					if(F.Type != "Water")
 						var/Splat = prob(10)
 						if(Splat)
-							if(src.BloodColour)
-								var/obj/BS = new src.BloodColour()
+							if(src.BloodColor)
+								var/obj/BS = new src.BloodColor()
 								BS.Move(locate(F.x,F.y,F.z))
 		ArrowDamage(var/DMG,var/obj/A)
 			if(src.Humanoid)
@@ -249,78 +253,78 @@ mob
 							src.overlays -= /obj/Misc/CombatOverlays/Torso/
 					if(src.WChest)
 						var/obj/I = src.WChest
-						if(I.DefenceType == "Plate")
+						if(I.DefenseType == "Plate")
 							GetsStuck = prob(5)
-						if(I.Defence == "Chain")
+						if(I.Defense == "Chain")
 							GetsStuck = prob(25)
-						if(I.Defence != "Chain" && I.Defence != "Plate")
+						if(I.Defense != "Chain" && I.Defense != "Plate")
 							GetsStuck = 100
 						DMG -= src.Endurance / 5
 						if(DMG >= 0)
 							I.Dura -= DMG / 10
 							src.CheckArmourDura()
-						if(I.DefenceType == "Plate")
+						if(I.DefenseType == "Plate")
 							GetsThrough -= 65
 							if(ArmourOpening == 0)
 								ArmourOpening = prob(10 - I.Dura / 10)
-						if(I.DefenceType == "Chain")
+						if(I.DefenseType == "Chain")
 							GetsThrough -= 33
-						if(I.DefenceType == "Leather")
+						if(I.DefenseType == "Leather")
 							GetsThrough -= 10
 						if(ArmourOpening == 0)
-							DMG -= I.Defence
+							DMG -= I.Defense
 						if(ArmourOpening)
-							DMG -= I.Defence / 2
+							DMG -= I.Defense / 2
 							ArmourOpening = 0
 					if(src.WUpperBody)
 						var/obj/I = src.WUpperBody
-						if(I.DefenceType == "Plate")
+						if(I.DefenseType == "Plate")
 							GetsStuck = prob(5)
-						if(I.Defence == "Chain")
+						if(I.Defense == "Chain")
 							GetsStuck = prob(25)
-						if(I.Defence != "Chain" && I.Defence != "Plate")
+						if(I.Defense != "Chain" && I.Defense != "Plate")
 							GetsStuck = 100
 						DMG -= src.Endurance / 5
 						if(DMG >= 0)
 							I.Dura -= DMG / 10
 							src.CheckArmourDura()
-						if(I.DefenceType == "Plate")
+						if(I.DefenseType == "Plate")
 							GetsThrough -= 65
 							if(ArmourOpening == 0)
 								ArmourOpening = prob(10 - I.Dura / 10)
-						if(I.DefenceType == "Chain")
+						if(I.DefenseType == "Chain")
 							GetsThrough -= 33
-						if(I.DefenceType == "Leather")
+						if(I.DefenseType == "Leather")
 							GetsThrough -= 10
 						if(ArmourOpening == 0)
-							DMG -= I.Defence
+							DMG -= I.Defense
 						if(ArmourOpening)
-							DMG -= I.Defence / 2
+							DMG -= I.Defense / 2
 							ArmourOpening = 0
 					if(src.WShoulders)
 						var/obj/I = src.WShoulders
-						if(I.DefenceType == "Plate")
+						if(I.DefenseType == "Plate")
 							GetsStuck = prob(5)
-						if(I.Defence == "Chain")
+						if(I.Defense == "Chain")
 							GetsStuck = prob(25)
-						if(I.Defence != "Chain" && I.Defence != "Plate")
+						if(I.Defense != "Chain" && I.Defense != "Plate")
 							GetsStuck = 100
 						DMG -= src.Endurance / 5
 						if(DMG >= 0)
 							I.Dura -= DMG / 10
 							src.CheckArmourDura()
-						if(I.DefenceType == "Plate")
+						if(I.DefenseType == "Plate")
 							GetsThrough -= 65
 							if(ArmourOpening == 0)
 								ArmourOpening = prob(10 - I.Dura / 10)
-						if(I.DefenceType == "Chain")
+						if(I.DefenseType == "Chain")
 							GetsThrough -= 33
-						if(I.DefenceType == "Leather")
+						if(I.DefenseType == "Leather")
 							GetsThrough -= 10
 						if(ArmourOpening == 0)
-							DMG -= I.Defence
+							DMG -= I.Defense
 						if(ArmourOpening)
-							DMG -= I.Defence / 2
+							DMG -= I.Defense / 2
 							ArmourOpening = 0
 					Through = prob(GetsThrough)
 					if(Through == 0)
@@ -549,28 +553,28 @@ mob
 							src.overlays -= /obj/Misc/CombatOverlays/Head/
 					if(src.WHead)
 						var/obj/I = src.WHead
-						if(I.DefenceType == "Plate")
+						if(I.DefenseType == "Plate")
 							GetsStuck = prob(5)
-						if(I.Defence == "Chain")
+						if(I.Defense == "Chain")
 							GetsStuck = prob(25)
-						if(I.Defence != "Chain" && I.Defence != "Plate")
+						if(I.Defense != "Chain" && I.Defense != "Plate")
 							GetsStuck = 100
 						DMG -= src.Endurance / 5
 						if(DMG >= 0)
 							I.Dura -= DMG / 10
 							src.CheckArmourDura()
-						if(I.DefenceType == "Plate")
+						if(I.DefenseType == "Plate")
 							GetsThrough -= 65
 							if(ArmourOpening == 0)
 								ArmourOpening = prob(10 - I.Dura / 10)
-						if(I.DefenceType == "Chain")
+						if(I.DefenseType == "Chain")
 							GetsThrough -= 33
-						if(I.DefenceType == "Leather")
+						if(I.DefenseType == "Leather")
 							GetsThrough -= 10
 						if(ArmourOpening == 0)
-							DMG -= I.Defence
+							DMG -= I.Defense
 						if(ArmourOpening)
-							DMG -= I.Defence / 2
+							DMG -= I.Defense / 2
 							ArmourOpening = 0
 					Through = prob(GetsThrough)
 					if(DMG >= 0 && Through)
@@ -786,53 +790,53 @@ mob
 								src.overlays -= /obj/Misc/CombatOverlays/LeftArm/
 						if(src.WShoulders)
 							var/obj/I = src.WShoulders
-							if(I.DefenceType == "Plate")
+							if(I.DefenseType == "Plate")
 								GetsStuck = prob(5)
-							if(I.Defence == "Chain")
+							if(I.Defense == "Chain")
 								GetsStuck = prob(25)
-							if(I.Defence != "Chain" && I.Defence != "Plate")
+							if(I.Defense != "Chain" && I.Defense != "Plate")
 								GetsStuck = 100
 							DMG -= src.Endurance / 5
 							if(DMG >= 0)
 								I.Dura -= DMG / 10
 								src.CheckArmourDura()
-							if(I.DefenceType == "Plate")
+							if(I.DefenseType == "Plate")
 								GetsThrough -= 65
 								if(ArmourOpening == 0)
 									ArmourOpening = prob(10 - I.Dura / 10)
-							if(I.DefenceType == "Chain")
+							if(I.DefenseType == "Chain")
 								GetsThrough -= 33
-							if(I.DefenceType == "Leather")
+							if(I.DefenseType == "Leather")
 								GetsThrough -= 10
 							if(ArmourOpening == 0)
-								DMG -= I.Defence
+								DMG -= I.Defense
 							if(ArmourOpening)
-								DMG -= I.Defence / 2
+								DMG -= I.Defense / 2
 								ArmourOpening = 0
 						if(src.WLeftHand)
 							var/obj/I = src.WLeftHand
-							if(I.DefenceType == "Plate")
+							if(I.DefenseType == "Plate")
 								GetsStuck = prob(5)
-							if(I.Defence == "Chain")
+							if(I.Defense == "Chain")
 								GetsStuck = prob(25)
-							if(I.Defence != "Chain" && I.Defence != "Plate")
+							if(I.Defense != "Chain" && I.Defense != "Plate")
 								GetsStuck = 100
 							DMG -= src.Endurance / 5
 							if(DMG >= 0)
 								I.Dura -= DMG / 10
 								src.CheckArmourDura()
-							if(I.DefenceType == "Plate")
+							if(I.DefenseType == "Plate")
 								GetsThrough -= 65
 								if(ArmourOpening == 0)
 									ArmourOpening = prob(10 - I.Dura / 10)
-							if(I.DefenceType == "Chain")
+							if(I.DefenseType == "Chain")
 								GetsThrough -= 33
-							if(I.DefenceType == "Leather")
+							if(I.DefenseType == "Leather")
 								GetsThrough -= 10
 							if(ArmourOpening == 0)
-								DMG -= I.Defence
+								DMG -= I.Defense
 							if(ArmourOpening)
-								DMG -= I.Defence / 2
+								DMG -= I.Defense / 2
 								ArmourOpening = 0
 						Through = prob(GetsThrough)
 						if(DMG >= 0 && Through)
@@ -876,53 +880,53 @@ mob
 								src.overlays -= /obj/Misc/CombatOverlays/RightArm/
 						if(src.WShoulders)
 							var/obj/I = src.WShoulders
-							if(I.DefenceType == "Plate")
+							if(I.DefenseType == "Plate")
 								GetsStuck = prob(5)
-							if(I.Defence == "Chain")
+							if(I.Defense == "Chain")
 								GetsStuck = prob(25)
-							if(I.Defence != "Chain" && I.Defence != "Plate")
+							if(I.Defense != "Chain" && I.Defense != "Plate")
 								GetsStuck = 100
 							DMG -= src.Endurance / 5
 							if(DMG >= 0)
 								I.Dura -= DMG / 10
 								src.CheckArmourDura()
-							if(I.DefenceType == "Plate")
+							if(I.DefenseType == "Plate")
 								GetsThrough -= 65
 								if(ArmourOpening == 0)
 									ArmourOpening = prob(10 - I.Dura / 10)
-							if(I.DefenceType == "Chain")
+							if(I.DefenseType == "Chain")
 								GetsThrough -= 33
-							if(I.DefenceType == "Leather")
+							if(I.DefenseType == "Leather")
 								GetsThrough -= 10
 							if(ArmourOpening == 0)
-								DMG -= I.Defence
+								DMG -= I.Defense
 							if(ArmourOpening)
-								DMG -= I.Defence / 2
+								DMG -= I.Defense / 2
 								ArmourOpening = 0
 						if(src.WRightHand)
 							var/obj/I = src.WRightHand
-							if(I.DefenceType == "Plate")
+							if(I.DefenseType == "Plate")
 								GetsStuck = prob(5)
-							if(I.Defence == "Chain")
+							if(I.Defense == "Chain")
 								GetsStuck = prob(25)
-							if(I.Defence != "Chain" && I.Defence != "Plate")
+							if(I.Defense != "Chain" && I.Defense != "Plate")
 								GetsStuck = 100
 							DMG -= src.Endurance / 5
 							if(DMG >= 0)
 								I.Dura -= DMG / 10
 								src.CheckArmourDura()
-							if(I.DefenceType == "Plate")
+							if(I.DefenseType == "Plate")
 								GetsThrough -= 65
 								if(ArmourOpening == 0)
 									ArmourOpening = prob(10 - I.Dura / 10)
-							if(I.DefenceType == "Chain")
+							if(I.DefenseType == "Chain")
 								GetsThrough -= 33
-							if(I.DefenceType == "Leather")
+							if(I.DefenseType == "Leather")
 								GetsThrough -= 10
 							if(ArmourOpening == 0)
-								DMG -= I.Defence
+								DMG -= I.Defense
 							if(ArmourOpening)
-								DMG -= I.Defence / 2
+								DMG -= I.Defense / 2
 								ArmourOpening = 0
 						Through = prob(GetsThrough)
 						if(DMG >= 0 && Through)
@@ -966,53 +970,53 @@ mob
 								src.overlays -= /obj/Misc/CombatOverlays/RightLeg/
 						if(src.WLegs)
 							var/obj/I = src.WLegs
-							if(I.DefenceType == "Plate")
+							if(I.DefenseType == "Plate")
 								GetsStuck = prob(5)
-							if(I.Defence == "Chain")
+							if(I.Defense == "Chain")
 								GetsStuck = prob(25)
-							if(I.Defence != "Chain" && I.Defence != "Plate")
+							if(I.Defense != "Chain" && I.Defense != "Plate")
 								GetsStuck = 100
 							DMG -= src.Endurance / 5
 							if(DMG >= 0)
 								I.Dura -= DMG / 10
 								src.CheckArmourDura()
-							if(I.DefenceType == "Plate")
+							if(I.DefenseType == "Plate")
 								GetsThrough -= 65
 								if(ArmourOpening == 0)
 									ArmourOpening = prob(10 - I.Dura / 10)
-							if(I.DefenceType == "Chain")
+							if(I.DefenseType == "Chain")
 								GetsThrough -= 33
-							if(I.DefenceType == "Leather")
+							if(I.DefenseType == "Leather")
 								GetsThrough -= 10
 							if(ArmourOpening == 0)
-								DMG -= I.Defence
+								DMG -= I.Defense
 							if(ArmourOpening)
-								DMG -= I.Defence / 2
+								DMG -= I.Defense / 2
 								ArmourOpening = 0
 						if(src.WRightFoot)
 							var/obj/I = src.WRightFoot
-							if(I.DefenceType == "Plate")
+							if(I.DefenseType == "Plate")
 								GetsStuck = prob(5)
-							if(I.Defence == "Chain")
+							if(I.Defense == "Chain")
 								GetsStuck = prob(25)
-							if(I.Defence != "Chain" && I.Defence != "Plate")
+							if(I.Defense != "Chain" && I.Defense != "Plate")
 								GetsStuck = 100
 							DMG -= src.Endurance / 5
 							if(DMG >= 0)
 								I.Dura -= DMG / 10
 								src.CheckArmourDura()
-							if(I.DefenceType == "Plate")
+							if(I.DefenseType == "Plate")
 								GetsThrough -= 65
 								if(ArmourOpening == 0)
 									ArmourOpening = prob(10 - I.Dura / 10)
-							if(I.DefenceType == "Chain")
+							if(I.DefenseType == "Chain")
 								GetsThrough -= 33
-							if(I.DefenceType == "Leather")
+							if(I.DefenseType == "Leather")
 								GetsThrough -= 10
 							if(ArmourOpening == 0)
-								DMG -= I.Defence
+								DMG -= I.Defense
 							if(ArmourOpening)
-								DMG -= I.Defence / 2
+								DMG -= I.Defense / 2
 								ArmourOpening = 0
 						Through = prob(GetsThrough)
 						if(DMG >= 0 && Through)
@@ -1056,53 +1060,53 @@ mob
 								src.overlays -= /obj/Misc/CombatOverlays/LeftLeg/
 						if(src.WLegs)
 							var/obj/I = src.WLegs
-							if(I.DefenceType == "Plate")
+							if(I.DefenseType == "Plate")
 								GetsStuck = prob(5)
-							if(I.Defence == "Chain")
+							if(I.Defense == "Chain")
 								GetsStuck = prob(25)
-							if(I.Defence != "Chain" && I.Defence != "Plate")
+							if(I.Defense != "Chain" && I.Defense != "Plate")
 								GetsStuck = 100
 							DMG -= src.Endurance / 5
 							if(DMG >= 0)
 								I.Dura -= DMG / 10
 								src.CheckArmourDura()
-							if(I.DefenceType == "Plate")
+							if(I.DefenseType == "Plate")
 								GetsThrough -= 65
 								if(ArmourOpening == 0)
 									ArmourOpening = prob(10 - I.Dura / 10)
-							if(I.DefenceType == "Chain")
+							if(I.DefenseType == "Chain")
 								GetsThrough -= 33
-							if(I.DefenceType == "Leather")
+							if(I.DefenseType == "Leather")
 								GetsThrough -= 10
 							if(ArmourOpening == 0)
-								DMG -= I.Defence
+								DMG -= I.Defense
 							if(ArmourOpening)
-								DMG -= I.Defence / 2
+								DMG -= I.Defense / 2
 								ArmourOpening = 0
 						if(src.WLeftFoot)
 							var/obj/I = src.WLeftFoot
-							if(I.DefenceType == "Plate")
+							if(I.DefenseType == "Plate")
 								GetsStuck = prob(5)
-							if(I.Defence == "Chain")
+							if(I.Defense == "Chain")
 								GetsStuck = prob(25)
-							if(I.Defence != "Chain" && I.Defence != "Plate")
+							if(I.Defense != "Chain" && I.Defense != "Plate")
 								GetsStuck = 100
 							DMG -= src.Endurance / 5
 							if(DMG >= 0)
 								I.Dura -= DMG / 10
 								src.CheckArmourDura()
-							if(I.DefenceType == "Plate")
+							if(I.DefenseType == "Plate")
 								GetsThrough -= 65
 								if(ArmourOpening == 0)
 									ArmourOpening = prob(10 - I.Dura / 10)
-							if(I.DefenceType == "Chain")
+							if(I.DefenseType == "Chain")
 								GetsThrough -= 33
-							if(I.DefenceType == "Leather")
+							if(I.DefenseType == "Leather")
 								GetsThrough -= 10
 							if(ArmourOpening == 0)
-								DMG -= I.Defence
+								DMG -= I.Defense
 							if(ArmourOpening)
-								DMG -= I.Defence / 2
+								DMG -= I.Defense / 2
 								ArmourOpening = 0
 						Through = prob(GetsThrough)
 						if(DMG >= 0 && Through)
@@ -1177,8 +1181,8 @@ mob
 				var/Recover = prob(5)
 				if(src.Bleed)
 					if(Drip)
-						if(src.BloodColour)
-							var/obj/BS = new src.BloodColour()
+						if(src.BloodColor)
+							var/obj/BS = new src.BloodColor()
 							BS.Move(src.loc)
 				if(src.Bleed == "Badly")
 					Die = prob(1)
@@ -1194,9 +1198,15 @@ mob
 							view(src) << "<font color =red>[src] is bleeding [src.Bleed]!<br>"
 							src.BleedLast = src.Bleed
 				if(Die)
+<<<<<<< Updated upstream
 					view(src) << "<font color=red>[src] has bled to death!<br>"
 					if(src.BloodColour == /obj/Misc/Gore/BloodSplat/)
 						var/obj/BS = new src.BloodColour()
+=======
+					view(src) << "<font color=red>[src] dies from exsanguination.<br>"
+					if(src.BloodColor == /obj/Misc/Gore/BloodSplat/)
+						var/obj/BS = new src.BloodColor()
+>>>>>>> Stashed changes
 						BS.Move(src.loc)
 						BS.icon_state = "floor puddle"
 					src.Death()
@@ -1579,10 +1589,10 @@ mob
 				if(src.Weapon && src.Weapon2 == null)
 					Wep = src.Weapon
 				if(src.Weapon && src.Weapon2)
-					var/Weps = list()
-					Weps += src.Weapon
-					Weps += src.Weapon2
-					for(var/obj/Z in Weps)
+					var/Weaps = list()
+					Weaps += src.Weapon
+					Weaps += src.Weapon2
+					for(var/obj/Z in Weaps)
 						if(Z.ObjectTag == "Weapon")
 							Wep = Z
 			if(Wep)
@@ -1773,17 +1783,17 @@ mob
 						spawn(5)
 							if(T)
 								T.overlays -= /obj/Misc/CombatOverlays/Block/
-						var/WeaponColide = 0
+						var/WeaponCollide = 0
 						var/obj/W = null
 						if(MainWeapon)
 							if(T.Weapon)
-								WeaponColide = 1
+								WeaponCollide = 1
 								W = T.Weapon
 						if(MainWeapon)
 							if(T.Weapon2)
-								WeaponColide = 1
+								WeaponCollide = 1
 								W = T.Weapon2
-						if(WeaponColide)
+						if(WeaponCollide)
 							if(W && W.ObjectTag == "Weapon")
 								W.Dura -= rand(1,2)
 								MainWeapon.Dura -= rand(1,2)
@@ -1848,7 +1858,7 @@ mob
 						Block += T.ShieldSkill
 						Block += T.Agility / 2
 						Block -= src.Agility
-						Damage -= S.Defence / 4
+						Damage -= S.Defense / 4
 						var/BlockMath = 0
 						for(var/obj/Items/Armour/A in T)
 							if(A.suffix == "Equip")
@@ -1885,7 +1895,7 @@ mob
 						Block += T.ShieldSkill
 						Block += T.Agility / 2
 						Block -= src.Agility
-						Damage -= S.Defence / 4
+						Damage -= S.Defense / 4
 						var/BlockMath = 0
 						for(var/obj/Items/Armour/A in T)
 							if(A.suffix == "Equip")
@@ -2049,42 +2059,42 @@ mob
 								T.overlays -= /obj/Misc/CombatOverlays/Torso/
 						if(T.WBack)
 							var/obj/H = T.WBack
-							Damage -= H.Defence
+							Damage -= H.Defense
 							if(MainWeapon)
 								if(MainWeapon.DamageType == "Slash")
-									if(H.DefenceType == "Chain")
+									if(H.DefenseType == "Chain")
 										H.Dura -= rand(0.2,0.3)
 										MainWeapon.Dura -= rand(0.2,0.4)
 										Damage = Damage / 1.1
-									if(H.DefenceType == "Leather")
+									if(H.DefenseType == "Leather")
 										H.Dura -= rand(0.3,0.4)
 										MainWeapon.Dura -= rand(0.1,0.2)
 										Damage = Damage / 1.1
-									if(H.DefenceType == "Cloth")
+									if(H.DefenseType == "Cloth")
 										H.Dura -= rand(0.5,1)
 								if(MainWeapon.DamageType == "Blunt")
-									if(H.DefenceType == "Chain")
+									if(H.DefenseType == "Chain")
 										H.Dura -= rand(0.1,0.3)
 										MainWeapon.Dura -= rand(0.1,0.3)
 										StunChance += rand(1,3)
-									if(H.DefenceType == "Leather")
+									if(H.DefenseType == "Leather")
 										H.Dura -= rand(0.1,0.2)
 										MainWeapon.Dura -= rand(0.1,0.2)
 										Damage = Damage / 1.2
 										StunChance += rand(1,2)
-									if(H.DefenceType == "Cloth")
+									if(H.DefenseType == "Cloth")
 										H.Dura -= rand(0.1,0.3)
 										StunChance += rand(2,4)
 								if(MainWeapon.DamageType == "Pierce")
-									if(H.DefenceType == "Chain")
+									if(H.DefenseType == "Chain")
 										H.Dura -= rand(0.1,0.3)
 										MainWeapon.Dura -= rand(0.2,0.4)
 										Damage = Damage / 1.2
-									if(H.DefenceType == "Leather")
+									if(H.DefenseType == "Leather")
 										H.Dura -= rand(0.2,0.3)
 										MainWeapon.Dura -= rand(0.1,0.2)
 										Damage = Damage / 1.1
-									if(H.DefenceType == "Cloth")
+									if(H.DefenseType == "Cloth")
 										H.Dura -= rand(0.3,0.8)
 								T.CheckArmourDura()
 								src.CheckWeaponDura(MainWeapon)
@@ -2110,57 +2120,57 @@ mob
 							var/obj/H = T.WWaist
 							if(MainWeapon)
 								if(MainWeapon.DamageType == "Slash")
-									if(H.DefenceType == "Plate")
+									if(H.DefenseType == "Plate")
 										H.Dura -= rand(0.1,0.3)
 										MainWeapon.Dura -= rand(0.3,0.6)
 										Damage = Damage / 1.2
 										if(ArmourOpening == 0)
 											ArmourOpening = prob(5 - H.Dura / 20)
-									if(H.DefenceType == "Chain")
+									if(H.DefenseType == "Chain")
 										H.Dura -= rand(0.2,0.3)
 										MainWeapon.Dura -= rand(0.2,0.4)
 										Damage = Damage / 1.1
-									if(H.DefenceType == "Leather")
+									if(H.DefenseType == "Leather")
 										H.Dura -= rand(0.3,0.4)
 										MainWeapon.Dura -= rand(0.1,0.2)
 										Damage = Damage / 1.1
-									if(H.DefenceType == "Cloth")
+									if(H.DefenseType == "Cloth")
 										H.Dura -= rand(0.5,1)
 								if(MainWeapon.DamageType == "Blunt")
-									if(H.DefenceType == "Plate")
+									if(H.DefenseType == "Plate")
 										H.Dura -= rand(0.3,0.6)
 										MainWeapon.Dura -= rand(0.1,0.3)
 										StunChance += rand(1,3)
 										if(ArmourOpening == 0)
 											ArmourOpening = prob(5 - H.Dura / 20)
-									if(H.DefenceType == "Chain")
+									if(H.DefenseType == "Chain")
 										H.Dura -= rand(0.1,0.3)
 										MainWeapon.Dura -= rand(0.1,0.3)
 										StunChance += rand(1,3)
-									if(H.DefenceType == "Leather")
+									if(H.DefenseType == "Leather")
 										H.Dura -= rand(0.1,0.2)
 										MainWeapon.Dura -= rand(0.1,0.2)
 										Damage = Damage / 1.2
 										StunChance += rand(1,2)
-									if(H.DefenceType == "Cloth")
+									if(H.DefenseType == "Cloth")
 										H.Dura -= rand(0.1,0.3)
 										StunChance += rand(2,4)
 								if(MainWeapon.DamageType == "Pierce")
-									if(H.DefenceType == "Plate")
+									if(H.DefenseType == "Plate")
 										H.Dura -= rand(0.1,0.2)
 										MainWeapon.Dura -= rand(0.4,0.6)
 										Damage = Damage / 1.3
 										if(ArmourOpening == 0)
 											ArmourOpening = prob(5 - H.Dura / 20)
-									if(H.DefenceType == "Chain")
+									if(H.DefenseType == "Chain")
 										H.Dura -= rand(0.1,0.3)
 										MainWeapon.Dura -= rand(0.2,0.4)
 										Damage = Damage / 1.2
-									if(H.DefenceType == "Leather")
+									if(H.DefenseType == "Leather")
 										H.Dura -= rand(0.2,0.3)
 										MainWeapon.Dura -= rand(0.1,0.2)
 										Damage = Damage / 1.1
-									if(H.DefenceType == "Cloth")
+									if(H.DefenseType == "Cloth")
 										H.Dura -= rand(0.3,0.8)
 								T.CheckArmourDura()
 								src.CheckWeaponDura(MainWeapon)
@@ -2178,69 +2188,69 @@ mob
 									src.Claws -= rand(0.1,1)
 									if(src.Claws <= 0)
 										src.Claws = 0
-								if(H.DefenceType == "Plate")
+								if(H.DefenseType == "Plate")
 									if(ArmourOpening == 0)
 										ArmourOpening = prob(5 - H.Dura / 20)
 							if(ArmourOpening == 0)
-								Damage -= H.Defence
+								Damage -= H.Defense
 							if(ArmourOpening)
-								Damage -= H.Defence / rand(1.1,7)
+								Damage -= H.Defense / rand(1.1,7)
 								ArmourOpening = 0
 						if(T.WUpperBody)
 							var/obj/H = T.WUpperBody
 							if(MainWeapon)
 								if(MainWeapon.DamageType == "Slash")
-									if(H.DefenceType == "Plate")
+									if(H.DefenseType == "Plate")
 										H.Dura -= rand(0.1,0.3)
 										MainWeapon.Dura -= rand(0.3,0.6)
 										Damage = Damage / 1.2
 										if(ArmourOpening == 0)
 											ArmourOpening = prob(5 - H.Dura / 20)
-									if(H.DefenceType == "Chain")
+									if(H.DefenseType == "Chain")
 										H.Dura -= rand(0.2,0.3)
 										MainWeapon.Dura -= rand(0.2,0.4)
 										Damage = Damage / 1.1
-									if(H.DefenceType == "Leather")
+									if(H.DefenseType == "Leather")
 										H.Dura -= rand(0.3,0.4)
 										MainWeapon.Dura -= rand(0.1,0.2)
 										Damage = Damage / 1.1
-									if(H.DefenceType == "Cloth")
+									if(H.DefenseType == "Cloth")
 										H.Dura -= rand(0.5,1)
 								if(MainWeapon.DamageType == "Blunt")
-									if(H.DefenceType == "Plate")
+									if(H.DefenseType == "Plate")
 										H.Dura -= rand(0.3,0.6)
 										MainWeapon.Dura -= rand(0.1,0.3)
 										StunChance += rand(1,3)
 										if(ArmourOpening == 0)
 											ArmourOpening = prob(5 - H.Dura / 20)
-									if(H.DefenceType == "Chain")
+									if(H.DefenseType == "Chain")
 										H.Dura -= rand(0.1,0.3)
 										MainWeapon.Dura -= rand(0.1,0.3)
 										StunChance += rand(1,3)
-									if(H.DefenceType == "Leather")
+									if(H.DefenseType == "Leather")
 										H.Dura -= rand(0.1,0.2)
 										MainWeapon.Dura -= rand(0.1,0.2)
 										Damage = Damage / 1.2
 										StunChance += rand(1,2)
-									if(H.DefenceType == "Cloth")
+									if(H.DefenseType == "Cloth")
 										H.Dura -= rand(0.1,0.3)
 										StunChance += rand(2,4)
 								if(MainWeapon.DamageType == "Pierce")
-									if(H.DefenceType == "Plate")
+									if(H.DefenseType == "Plate")
 										H.Dura -= rand(0.1,0.2)
 										MainWeapon.Dura -= rand(0.4,0.6)
 										Damage = Damage / 1.3
 										if(ArmourOpening == 0)
 											ArmourOpening = prob(5 - H.Dura / 20)
-									if(H.DefenceType == "Chain")
+									if(H.DefenseType == "Chain")
 										H.Dura -= rand(0.1,0.3)
 										MainWeapon.Dura -= rand(0.2,0.4)
 										Damage = Damage / 1.2
-									if(H.DefenceType == "Leather")
+									if(H.DefenseType == "Leather")
 										H.Dura -= rand(0.2,0.3)
 										MainWeapon.Dura -= rand(0.1,0.2)
 										Damage = Damage / 1.1
-									if(H.DefenceType == "Cloth")
+									if(H.DefenseType == "Cloth")
 										H.Dura -= rand(0.3,0.8)
 								T.CheckArmourDura()
 								src.CheckWeaponDura(MainWeapon)
@@ -2258,69 +2268,69 @@ mob
 									src.Claws -= rand(0.1,1)
 									if(src.Claws <= 0)
 										src.Claws = 0
-								if(H.DefenceType == "Plate")
+								if(H.DefenseType == "Plate")
 									if(ArmourOpening == 0)
 										ArmourOpening = prob(5 - H.Dura / 20)
 							if(ArmourOpening == 0)
-								Damage -= H.Defence
+								Damage -= H.Defense
 							if(ArmourOpening)
-								Damage -= H.Defence / rand(1.1,7)
+								Damage -= H.Defense / rand(1.1,7)
 								ArmourOpening = 0
 						if(T.WShoulders)
 							var/obj/H = T.WShoulders
 							if(MainWeapon)
 								if(MainWeapon.DamageType == "Slash")
-									if(H.DefenceType == "Plate")
+									if(H.DefenseType == "Plate")
 										H.Dura -= rand(0.1,0.3)
 										MainWeapon.Dura -= rand(0.3,0.6)
 										Damage = Damage / 1.2
 										if(ArmourOpening == 0)
 											ArmourOpening = prob(5 - H.Dura / 20)
-									if(H.DefenceType == "Chain")
+									if(H.DefenseType == "Chain")
 										H.Dura -= rand(0.2,0.3)
 										MainWeapon.Dura -= rand(0.2,0.4)
 										Damage = Damage / 1.1
-									if(H.DefenceType == "Leather")
+									if(H.DefenseType == "Leather")
 										H.Dura -= rand(0.3,0.4)
 										MainWeapon.Dura -= rand(0.1,0.2)
 										Damage = Damage / 1.1
-									if(H.DefenceType == "Cloth")
+									if(H.DefenseType == "Cloth")
 										H.Dura -= rand(0.5,1)
 								if(MainWeapon.DamageType == "Blunt")
-									if(H.DefenceType == "Plate")
+									if(H.DefenseType == "Plate")
 										H.Dura -= rand(0.3,0.6)
 										MainWeapon.Dura -= rand(0.1,0.3)
 										StunChance += rand(1,3)
 										if(ArmourOpening == 0)
 											ArmourOpening = prob(5 - H.Dura / 20)
-									if(H.DefenceType == "Chain")
+									if(H.DefenseType == "Chain")
 										H.Dura -= rand(0.1,0.3)
 										MainWeapon.Dura -= rand(0.1,0.3)
 										StunChance += rand(1,3)
-									if(H.DefenceType == "Leather")
+									if(H.DefenseType == "Leather")
 										H.Dura -= rand(0.1,0.2)
 										MainWeapon.Dura -= rand(0.1,0.2)
 										Damage = Damage / 1.2
 										StunChance += rand(1,2)
-									if(H.DefenceType == "Cloth")
+									if(H.DefenseType == "Cloth")
 										H.Dura -= rand(0.1,0.3)
 										StunChance += rand(2,4)
 								if(MainWeapon.DamageType == "Pierce")
-									if(H.DefenceType == "Plate")
+									if(H.DefenseType == "Plate")
 										H.Dura -= rand(0.1,0.2)
 										MainWeapon.Dura -= rand(0.4,0.6)
 										Damage = Damage / 1.3
 										if(ArmourOpening == 0)
 											ArmourOpening = prob(5 - H.Dura / 20)
-									if(H.DefenceType == "Chain")
+									if(H.DefenseType == "Chain")
 										H.Dura -= rand(0.1,0.3)
 										MainWeapon.Dura -= rand(0.2,0.4)
 										Damage = Damage / 1.2
-									if(H.DefenceType == "Leather")
+									if(H.DefenseType == "Leather")
 										H.Dura -= rand(0.2,0.3)
 										MainWeapon.Dura -= rand(0.1,0.2)
 										Damage = Damage / 1.1
-									if(H.DefenceType == "Cloth")
+									if(H.DefenseType == "Cloth")
 										H.Dura -= rand(0.3,0.8)
 								T.CheckArmourDura()
 								src.CheckWeaponDura(MainWeapon)
@@ -2338,69 +2348,69 @@ mob
 									src.Claws -= rand(0.1,1)
 									if(src.Claws <= 0)
 										src.Claws = 0
-								if(H.DefenceType == "Plate")
+								if(H.DefenseType == "Plate")
 									if(ArmourOpening == 0)
 										ArmourOpening = prob(5 - H.Dura / 20)
 							if(ArmourOpening == 0)
-								Damage -= H.Defence
+								Damage -= H.Defense
 							if(ArmourOpening)
-								Damage -= H.Defence / rand(1.1,7)
+								Damage -= H.Defense / rand(1.1,7)
 								ArmourOpening = 0
 						if(T.WChest)
 							var/obj/H = T.WChest
 							if(MainWeapon)
 								if(MainWeapon.DamageType == "Slash")
-									if(H.DefenceType == "Plate")
+									if(H.DefenseType == "Plate")
 										H.Dura -= rand(0.1,0.3)
 										MainWeapon.Dura -= rand(0.3,0.6)
 										Damage = Damage / 1.2
 										if(ArmourOpening == 0)
 											ArmourOpening = prob(5 - H.Dura / 20)
-									if(H.DefenceType == "Chain")
+									if(H.DefenseType == "Chain")
 										H.Dura -= rand(0.2,0.3)
 										MainWeapon.Dura -= rand(0.2,0.4)
 										Damage = Damage / 1.1
-									if(H.DefenceType == "Leather")
+									if(H.DefenseType == "Leather")
 										H.Dura -= rand(0.3,0.4)
 										MainWeapon.Dura -= rand(0.1,0.2)
 										Damage = Damage / 1.1
-									if(H.DefenceType == "Cloth")
+									if(H.DefenseType == "Cloth")
 										H.Dura -= rand(0.5,1)
 								if(MainWeapon.DamageType == "Blunt")
-									if(H.DefenceType == "Plate")
+									if(H.DefenseType == "Plate")
 										H.Dura -= rand(0.3,0.6)
 										MainWeapon.Dura -= rand(0.1,0.3)
 										StunChance += rand(1,3)
 										if(ArmourOpening == 0)
 											ArmourOpening = prob(5 - H.Dura / 20)
-									if(H.DefenceType == "Chain")
+									if(H.DefenseType == "Chain")
 										H.Dura -= rand(0.1,0.3)
 										MainWeapon.Dura -= rand(0.1,0.3)
 										StunChance += rand(1,3)
-									if(H.DefenceType == "Leather")
+									if(H.DefenseType == "Leather")
 										H.Dura -= rand(0.1,0.2)
 										MainWeapon.Dura -= rand(0.1,0.2)
 										Damage = Damage / 1.2
 										StunChance += rand(1,2)
-									if(H.DefenceType == "Cloth")
+									if(H.DefenseType == "Cloth")
 										H.Dura -= rand(0.1,0.3)
 										StunChance += rand(2,4)
 								if(MainWeapon.DamageType == "Pierce")
-									if(H.DefenceType == "Plate")
+									if(H.DefenseType == "Plate")
 										H.Dura -= rand(0.1,0.2)
 										MainWeapon.Dura -= rand(0.4,0.6)
 										Damage = Damage / 1.3
 										if(ArmourOpening == 0)
 											ArmourOpening = prob(5 - H.Dura / 20)
-									if(H.DefenceType == "Chain")
+									if(H.DefenseType == "Chain")
 										H.Dura -= rand(0.1,0.3)
 										MainWeapon.Dura -= rand(0.2,0.4)
 										Damage = Damage / 1.2
-									if(H.DefenceType == "Leather")
+									if(H.DefenseType == "Leather")
 										H.Dura -= rand(0.2,0.3)
 										MainWeapon.Dura -= rand(0.1,0.2)
 										Damage = Damage / 1.1
-									if(H.DefenceType == "Cloth")
+									if(H.DefenseType == "Cloth")
 										H.Dura -= rand(0.3,0.8)
 								T.CheckArmourDura()
 								src.CheckWeaponDura(MainWeapon)
@@ -2418,13 +2428,13 @@ mob
 									src.Claws -= rand(0.1,1)
 									if(src.Claws <= 0)
 										src.Claws = 0
-								if(H.DefenceType == "Plate")
+								if(H.DefenseType == "Plate")
 									if(ArmourOpening == 0)
 										ArmourOpening = prob(5 - H.Dura / 20)
 							if(ArmourOpening == 0)
-								Damage -= H.Defence
+								Damage -= H.Defense
 							if(ArmourOpening)
-								Damage -= H.Defence / rand(1.1,7)
+								Damage -= H.Defense / rand(1.1,7)
 								ArmourOpening = 0
 						if(Damage >= 0)
 							var/KnockBack = prob(0 + src.Strength / 5)
@@ -2457,23 +2467,23 @@ mob
 									var/GetsThrough = 100
 									if(T.WChest)
 										var/obj/A = T.WChest
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 15
 									if(T.WUpperBody)
 										var/obj/A = T.WUpperBody
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 33
 									if(T.WWaist)
 										var/obj/A = T.WWaist
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 5
 									if(T.WShoulders)
 										var/obj/A = T.WShoulders
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 10
 									var/Through = prob(GetsThrough)
 									if(Through)
@@ -2504,23 +2514,23 @@ mob
 									var/GetsThrough = 100
 									if(T.WChest)
 										var/obj/A = T.WChest
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 15
 									if(T.WUpperBody)
 										var/obj/A = T.WUpperBody
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 33
 									if(T.WWaist)
 										var/obj/A = T.WWaist
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 5
 									if(T.WShoulders)
 										var/obj/A = T.WShoulders
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 10
 									var/Through = prob(GetsThrough)
 									if(Through)
@@ -2550,23 +2560,23 @@ mob
 									var/GetsThrough = 100
 									if(T.WChest)
 										var/obj/A = T.WChest
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 15
 									if(T.WUpperBody)
 										var/obj/A = T.WUpperBody
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 33
 									if(T.WWaist)
 										var/obj/A = T.WWaist
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 5
 									if(T.WShoulders)
 										var/obj/A = T.WShoulders
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 10
 									var/Through = prob(GetsThrough)
 									if(Through)
@@ -2591,23 +2601,23 @@ mob
 									var/GetsThrough = 100
 									if(T.WChest)
 										var/obj/A = T.WChest
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 15
 									if(T.WUpperBody)
 										var/obj/A = T.WUpperBody
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 33
 									if(T.WWaist)
 										var/obj/A = T.WWaist
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 5
 									if(T.WShoulders)
 										var/obj/A = T.WShoulders
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 10
 									var/Through = prob(GetsThrough)
 									if(Through)
@@ -2632,23 +2642,23 @@ mob
 									var/GetsThrough = 100
 									if(T.WChest)
 										var/obj/A = T.WChest
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 15
 									if(T.WUpperBody)
 										var/obj/A = T.WUpperBody
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 33
 									if(T.WWaist)
 										var/obj/A = T.WWaist
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 5
 									if(T.WShoulders)
 										var/obj/A = T.WShoulders
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 10
 									var/Through = prob(GetsThrough)
 									if(Through)
@@ -2681,23 +2691,23 @@ mob
 									var/GetsThrough = 100
 									if(T.WChest)
 										var/obj/A = T.WChest
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 15
 									if(T.WUpperBody)
 										var/obj/A = T.WUpperBody
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 33
 									if(T.WWaist)
 										var/obj/A = T.WWaist
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 5
 									if(T.WShoulders)
 										var/obj/A = T.WShoulders
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 10
 									var/Through = prob(GetsThrough)
 									if(Through)
@@ -2732,23 +2742,23 @@ mob
 									var/GetsThrough = 100
 									if(T.WChest)
 										var/obj/A = T.WChest
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 15
 									if(T.WUpperBody)
 										var/obj/A = T.WUpperBody
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 33
 									if(T.WWaist)
 										var/obj/A = T.WWaist
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 5
 									if(T.WShoulders)
 										var/obj/A = T.WShoulders
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 10
 									var/Through = prob(GetsThrough)
 									if(Through)
@@ -2773,23 +2783,23 @@ mob
 									var/GetsThrough = 100
 									if(T.WChest)
 										var/obj/A = T.WChest
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 15
 									if(T.WUpperBody)
 										var/obj/A = T.WUpperBody
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 33
 									if(T.WWaist)
 										var/obj/A = T.WWaist
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 5
 									if(T.WShoulders)
 										var/obj/A = T.WShoulders
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 10
 									var/Through = prob(GetsThrough)
 									if(Through)
@@ -2819,23 +2829,23 @@ mob
 									var/GetsThrough = 100
 									if(T.WChest)
 										var/obj/A = T.WChest
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 15
 									if(T.WUpperBody)
 										var/obj/A = T.WUpperBody
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 33
 									if(T.WWaist)
 										var/obj/A = T.WWaist
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 5
 									if(T.WShoulders)
 										var/obj/A = T.WShoulders
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 10
 									var/Through = prob(GetsThrough)
 									if(Through)
@@ -2863,23 +2873,23 @@ mob
 									var/GetsThrough = 100
 									if(T.WChest)
 										var/obj/A = T.WChest
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 15
 									if(T.WUpperBody)
 										var/obj/A = T.WUpperBody
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 33
 									if(T.WWaist)
 										var/obj/A = T.WWaist
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 5
 									if(T.WShoulders)
 										var/obj/A = T.WShoulders
-										if(A.DefenceType != "Leather")
-											if(A.DefenceType != "Cloth")
+										if(A.DefenseType != "Leather")
+											if(A.DefenseType != "Cloth")
 												GetsThrough -= 10
 									var/Through = prob(GetsThrough)
 									if(Through)
@@ -2910,57 +2920,57 @@ mob
 								var/obj/H = T.WLegs
 								if(MainWeapon)
 									if(MainWeapon.DamageType == "Slash")
-										if(H.DefenceType == "Plate")
+										if(H.DefenseType == "Plate")
 											H.Dura -= rand(0.1,0.3)
 											MainWeapon.Dura -= rand(0.3,0.6)
 											Damage = Damage / 1.2
 											if(ArmourOpening == 0)
 												ArmourOpening = prob(5 - H.Dura / 20)
-										if(H.DefenceType == "Chain")
+										if(H.DefenseType == "Chain")
 											H.Dura -= rand(0.2,0.3)
 											MainWeapon.Dura -= rand(0.2,0.4)
 											Damage = Damage / 1.1
-										if(H.DefenceType == "Leather")
+										if(H.DefenseType == "Leather")
 											H.Dura -= rand(0.3,0.4)
 											MainWeapon.Dura -= rand(0.1,0.2)
 											Damage = Damage / 1.1
-										if(H.DefenceType == "Cloth")
+										if(H.DefenseType == "Cloth")
 											H.Dura -= rand(0.5,1)
 									if(MainWeapon.DamageType == "Blunt")
-										if(H.DefenceType == "Plate")
+										if(H.DefenseType == "Plate")
 											H.Dura -= rand(0.3,0.6)
 											MainWeapon.Dura -= rand(0.1,0.3)
 											StunChance += rand(1,3)
 											if(ArmourOpening == 0)
 												ArmourOpening = prob(5 - H.Dura / 20)
-										if(H.DefenceType == "Chain")
+										if(H.DefenseType == "Chain")
 											H.Dura -= rand(0.1,0.3)
 											MainWeapon.Dura -= rand(0.1,0.3)
 											StunChance += rand(1,3)
-										if(H.DefenceType == "Leather")
+										if(H.DefenseType == "Leather")
 											H.Dura -= rand(0.1,0.2)
 											MainWeapon.Dura -= rand(0.1,0.2)
 											Damage = Damage / 1.2
 											StunChance += rand(1,2)
-										if(H.DefenceType == "Cloth")
+										if(H.DefenseType == "Cloth")
 											H.Dura -= rand(0.1,0.3)
 											StunChance += rand(2,4)
 									if(MainWeapon.DamageType == "Pierce")
-										if(H.DefenceType == "Plate")
+										if(H.DefenseType == "Plate")
 											H.Dura -= rand(0.1,0.2)
 											MainWeapon.Dura -= rand(0.4,0.6)
 											Damage = Damage / 1.3
 											if(ArmourOpening == 0)
 												ArmourOpening = prob(5 - H.Dura / 20)
-										if(H.DefenceType == "Chain")
+										if(H.DefenseType == "Chain")
 											H.Dura -= rand(0.1,0.3)
 											MainWeapon.Dura -= rand(0.2,0.4)
 											Damage = Damage / 1.2
-										if(H.DefenceType == "Leather")
+										if(H.DefenseType == "Leather")
 											H.Dura -= rand(0.2,0.3)
 											MainWeapon.Dura -= rand(0.1,0.2)
 											Damage = Damage / 1.1
-										if(H.DefenceType == "Cloth")
+										if(H.DefenseType == "Cloth")
 											H.Dura -= rand(0.3,0.8)
 									T.CheckArmourDura()
 									src.CheckWeaponDura(MainWeapon)
@@ -2978,69 +2988,69 @@ mob
 										src.Claws -= rand(0.1,1)
 										if(src.Claws <= 0)
 											src.Claws = 0
-									if(H.DefenceType == "Plate")
+									if(H.DefenseType == "Plate")
 										if(ArmourOpening == 0)
 											ArmourOpening = prob(5 - H.Dura / 20)
 								if(ArmourOpening == 0)
-									Damage -= H.Defence
+									Damage -= H.Defense
 								if(ArmourOpening)
-									Damage -= H.Defence / rand(1.1,7)
+									Damage -= H.Defense / rand(1.1,7)
 									ArmourOpening = 0
 							if(T.WRightFoot)
 								var/obj/H = T.WRightFoot
 								if(MainWeapon)
 									if(MainWeapon.DamageType == "Slash")
-										if(H.DefenceType == "Plate")
+										if(H.DefenseType == "Plate")
 											H.Dura -= rand(0.1,0.3)
 											MainWeapon.Dura -= rand(0.3,0.6)
 											Damage = Damage / 1.2
 											if(ArmourOpening == 0)
 												ArmourOpening = prob(5 - H.Dura / 20)
-										if(H.DefenceType == "Chain")
+										if(H.DefenseType == "Chain")
 											H.Dura -= rand(0.2,0.3)
 											MainWeapon.Dura -= rand(0.2,0.4)
 											Damage = Damage / 1.1
-										if(H.DefenceType == "Leather")
+										if(H.DefenseType == "Leather")
 											H.Dura -= rand(0.3,0.4)
 											MainWeapon.Dura -= rand(0.1,0.2)
 											Damage = Damage / 1.1
-										if(H.DefenceType == "Cloth")
+										if(H.DefenseType == "Cloth")
 											H.Dura -= rand(0.5,1)
 									if(MainWeapon.DamageType == "Blunt")
-										if(H.DefenceType == "Plate")
+										if(H.DefenseType == "Plate")
 											H.Dura -= rand(0.3,0.6)
 											MainWeapon.Dura -= rand(0.1,0.3)
 											StunChance += rand(1,3)
 											if(ArmourOpening == 0)
 												ArmourOpening = prob(5 - H.Dura / 20)
-										if(H.DefenceType == "Chain")
+										if(H.DefenseType == "Chain")
 											H.Dura -= rand(0.1,0.3)
 											MainWeapon.Dura -= rand(0.1,0.3)
 											StunChance += rand(1,3)
-										if(H.DefenceType == "Leather")
+										if(H.DefenseType == "Leather")
 											H.Dura -= rand(0.1,0.2)
 											MainWeapon.Dura -= rand(0.1,0.2)
 											Damage = Damage / 1.2
 											StunChance += rand(1,2)
-										if(H.DefenceType == "Cloth")
+										if(H.DefenseType == "Cloth")
 											H.Dura -= rand(0.1,0.3)
 											StunChance += rand(2,4)
 									if(MainWeapon.DamageType == "Pierce")
-										if(H.DefenceType == "Plate")
+										if(H.DefenseType == "Plate")
 											H.Dura -= rand(0.1,0.2)
 											MainWeapon.Dura -= rand(0.4,0.6)
 											Damage = Damage / 1.3
 											if(ArmourOpening == 0)
 												ArmourOpening = prob(5 - H.Dura / 20)
-										if(H.DefenceType == "Chain")
+										if(H.DefenseType == "Chain")
 											H.Dura -= rand(0.1,0.3)
 											MainWeapon.Dura -= rand(0.2,0.4)
 											Damage = Damage / 1.2
-										if(H.DefenceType == "Leather")
+										if(H.DefenseType == "Leather")
 											H.Dura -= rand(0.2,0.3)
 											MainWeapon.Dura -= rand(0.1,0.2)
 											Damage = Damage / 1.1
-										if(H.DefenceType == "Cloth")
+										if(H.DefenseType == "Cloth")
 											H.Dura -= rand(0.3,0.8)
 									T.CheckArmourDura()
 									src.CheckWeaponDura(MainWeapon)
@@ -3058,13 +3068,13 @@ mob
 										src.Claws -= rand(0.1,1)
 										if(src.Claws <= 0)
 											src.Claws = 0
-									if(H.DefenceType == "Plate")
+									if(H.DefenseType == "Plate")
 										if(ArmourOpening == 0)
 											ArmourOpening = prob(5 - H.Dura / 20)
 								if(ArmourOpening == 0)
-									Damage -= H.Defence
+									Damage -= H.Defense
 								if(ArmourOpening)
-									Damage -= H.Defence / rand(1.1,7)
+									Damage -= H.Defense / rand(1.1,7)
 									ArmourOpening = 0
 							if(Damage >= 0)
 								var/Stunned = prob(StunChance)
@@ -3094,8 +3104,8 @@ mob
 												CanSlice = 1
 										if(src.Claws && src.Weapon == null)
 											CanSlice = 1
-										if(A.DefenceType != "Plate")
-											if(A.DefenceType != "Chain")
+										if(A.DefenseType != "Plate")
+											if(A.DefenseType != "Chain")
 												if(CanSlice)
 													T.RightLeg = 0
 													if(T.WoundRightLeg)
@@ -3200,57 +3210,57 @@ mob
 								var/obj/H = T.WLegs
 								if(MainWeapon)
 									if(MainWeapon.DamageType == "Slash")
-										if(H.DefenceType == "Plate")
+										if(H.DefenseType == "Plate")
 											H.Dura -= rand(0.1,0.3)
 											MainWeapon.Dura -= rand(0.3,0.6)
 											Damage = Damage / 1.2
 											if(ArmourOpening == 0)
 												ArmourOpening = prob(5 - H.Dura / 20)
-										if(H.DefenceType == "Chain")
+										if(H.DefenseType == "Chain")
 											H.Dura -= rand(0.2,0.3)
 											MainWeapon.Dura -= rand(0.2,0.4)
 											Damage = Damage / 1.1
-										if(H.DefenceType == "Leather")
+										if(H.DefenseType == "Leather")
 											H.Dura -= rand(0.3,0.4)
 											MainWeapon.Dura -= rand(0.1,0.2)
 											Damage = Damage / 1.1
-										if(H.DefenceType == "Cloth")
+										if(H.DefenseType == "Cloth")
 											H.Dura -= rand(0.5,1)
 									if(MainWeapon.DamageType == "Blunt")
-										if(H.DefenceType == "Plate")
+										if(H.DefenseType == "Plate")
 											H.Dura -= rand(0.3,0.6)
 											MainWeapon.Dura -= rand(0.1,0.3)
 											StunChance += rand(1,3)
 											if(ArmourOpening == 0)
 												ArmourOpening = prob(5 - H.Dura / 20)
-										if(H.DefenceType == "Chain")
+										if(H.DefenseType == "Chain")
 											H.Dura -= rand(0.1,0.3)
 											MainWeapon.Dura -= rand(0.1,0.3)
 											StunChance += rand(1,3)
-										if(H.DefenceType == "Leather")
+										if(H.DefenseType == "Leather")
 											H.Dura -= rand(0.1,0.2)
 											MainWeapon.Dura -= rand(0.1,0.2)
 											Damage = Damage / 1.2
 											StunChance += rand(1,2)
-										if(H.DefenceType == "Cloth")
+										if(H.DefenseType == "Cloth")
 											H.Dura -= rand(0.1,0.3)
 											StunChance += rand(2,4)
 									if(MainWeapon.DamageType == "Pierce")
-										if(H.DefenceType == "Plate")
+										if(H.DefenseType == "Plate")
 											H.Dura -= rand(0.1,0.2)
 											MainWeapon.Dura -= rand(0.4,0.6)
 											Damage = Damage / 1.3
 											if(ArmourOpening == 0)
 												ArmourOpening = prob(5 - H.Dura / 20)
-										if(H.DefenceType == "Chain")
+										if(H.DefenseType == "Chain")
 											H.Dura -= rand(0.1,0.3)
 											MainWeapon.Dura -= rand(0.2,0.4)
 											Damage = Damage / 1.2
-										if(H.DefenceType == "Leather")
+										if(H.DefenseType == "Leather")
 											H.Dura -= rand(0.2,0.3)
 											MainWeapon.Dura -= rand(0.1,0.2)
 											Damage = Damage / 1.1
-										if(H.DefenceType == "Cloth")
+										if(H.DefenseType == "Cloth")
 											H.Dura -= rand(0.3,0.8)
 									T.CheckArmourDura()
 									src.CheckWeaponDura(MainWeapon)
@@ -3268,69 +3278,69 @@ mob
 										src.Claws -= rand(0.1,1)
 										if(src.Claws <= 0)
 											src.Claws = 0
-									if(H.DefenceType == "Plate")
+									if(H.DefenseType == "Plate")
 										if(ArmourOpening == 0)
 											ArmourOpening = prob(5 - H.Dura / 20)
 								if(ArmourOpening == 0)
-									Damage -= H.Defence
+									Damage -= H.Defense
 								if(ArmourOpening)
-									Damage -= H.Defence / rand(1.1,7)
+									Damage -= H.Defense / rand(1.1,7)
 									ArmourOpening = 0
 							if(T.WLeftFoot)
 								var/obj/H = T.WLeftFoot
 								if(MainWeapon)
 									if(MainWeapon.DamageType == "Slash")
-										if(H.DefenceType == "Plate")
+										if(H.DefenseType == "Plate")
 											H.Dura -= rand(0.1,0.3)
 											MainWeapon.Dura -= rand(0.3,0.6)
 											Damage = Damage / 1.2
 											if(ArmourOpening == 0)
 												ArmourOpening = prob(5 - H.Dura / 20)
-										if(H.DefenceType == "Chain")
+										if(H.DefenseType == "Chain")
 											H.Dura -= rand(0.2,0.3)
 											MainWeapon.Dura -= rand(0.2,0.4)
 											Damage = Damage / 1.1
-										if(H.DefenceType == "Leather")
+										if(H.DefenseType == "Leather")
 											H.Dura -= rand(0.3,0.4)
 											MainWeapon.Dura -= rand(0.1,0.2)
 											Damage = Damage / 1.1
-										if(H.DefenceType == "Cloth")
+										if(H.DefenseType == "Cloth")
 											H.Dura -= rand(0.5,1)
 									if(MainWeapon.DamageType == "Blunt")
-										if(H.DefenceType == "Plate")
+										if(H.DefenseType == "Plate")
 											H.Dura -= rand(0.3,0.6)
 											MainWeapon.Dura -= rand(0.1,0.3)
 											StunChance += rand(1,3)
 											if(ArmourOpening == 0)
 												ArmourOpening = prob(5 - H.Dura / 20)
-										if(H.DefenceType == "Chain")
+										if(H.DefenseType == "Chain")
 											H.Dura -= rand(0.1,0.3)
 											MainWeapon.Dura -= rand(0.1,0.3)
 											StunChance += rand(1,3)
-										if(H.DefenceType == "Leather")
+										if(H.DefenseType == "Leather")
 											H.Dura -= rand(0.1,0.2)
 											MainWeapon.Dura -= rand(0.1,0.2)
 											Damage = Damage / 1.2
 											StunChance += rand(1,2)
-										if(H.DefenceType == "Cloth")
+										if(H.DefenseType == "Cloth")
 											H.Dura -= rand(0.1,0.3)
 											StunChance += rand(2,4)
 									if(MainWeapon.DamageType == "Pierce")
-										if(H.DefenceType == "Plate")
+										if(H.DefenseType == "Plate")
 											H.Dura -= rand(0.1,0.2)
 											MainWeapon.Dura -= rand(0.4,0.6)
 											Damage = Damage / 1.3
 											if(ArmourOpening == 0)
 												ArmourOpening = prob(5 - H.Dura / 20)
-										if(H.DefenceType == "Chain")
+										if(H.DefenseType == "Chain")
 											H.Dura -= rand(0.1,0.3)
 											MainWeapon.Dura -= rand(0.2,0.4)
 											Damage = Damage / 1.2
-										if(H.DefenceType == "Leather")
+										if(H.DefenseType == "Leather")
 											H.Dura -= rand(0.2,0.3)
 											MainWeapon.Dura -= rand(0.1,0.2)
 											Damage = Damage / 1.1
-										if(H.DefenceType == "Cloth")
+										if(H.DefenseType == "Cloth")
 											H.Dura -= rand(0.3,0.8)
 									T.CheckArmourDura()
 									src.CheckWeaponDura(MainWeapon)
@@ -3348,13 +3358,13 @@ mob
 										src.Claws -= rand(0.1,1)
 										if(src.Claws <= 0)
 											src.Claws = 0
-									if(H.DefenceType == "Plate")
+									if(H.DefenseType == "Plate")
 										if(ArmourOpening == 0)
 											ArmourOpening = prob(5 - H.Dura / 20)
 								if(ArmourOpening == 0)
-									Damage -= H.Defence
+									Damage -= H.Defense
 								if(ArmourOpening)
-									Damage -= H.Defence / rand(1.1,7)
+									Damage -= H.Defense / rand(1.1,7)
 									ArmourOpening = 0
 							if(Damage >= 0)
 								var/Stunned = prob(StunChance)
@@ -3384,8 +3394,8 @@ mob
 												CanSlice = 1
 										if(src.Claws && src.Weapon == null)
 											CanSlice = 1
-										if(A.DefenceType != "Plate")
-											if(A.DefenceType != "Chain")
+										if(A.DefenseType != "Plate")
+											if(A.DefenseType != "Chain")
 												if(CanSlice)
 													T.LeftLeg = 0
 													if(T.WoundLeftLeg)
@@ -3490,57 +3500,57 @@ mob
 								var/obj/H = T.WShoulders
 								if(MainWeapon)
 									if(MainWeapon.DamageType == "Slash")
-										if(H.DefenceType == "Plate")
+										if(H.DefenseType == "Plate")
 											H.Dura -= rand(0.1,0.3)
 											MainWeapon.Dura -= rand(0.3,0.6)
 											Damage = Damage / 1.2
 											if(ArmourOpening == 0)
 												ArmourOpening = prob(5 - H.Dura / 20)
-										if(H.DefenceType == "Chain")
+										if(H.DefenseType == "Chain")
 											H.Dura -= rand(0.2,0.3)
 											MainWeapon.Dura -= rand(0.2,0.4)
 											Damage = Damage / 1.1
-										if(H.DefenceType == "Leather")
+										if(H.DefenseType == "Leather")
 											H.Dura -= rand(0.3,0.4)
 											MainWeapon.Dura -= rand(0.1,0.2)
 											Damage = Damage / 1.1
-										if(H.DefenceType == "Cloth")
+										if(H.DefenseType == "Cloth")
 											H.Dura -= rand(0.5,1)
 									if(MainWeapon.DamageType == "Blunt")
-										if(H.DefenceType == "Plate")
+										if(H.DefenseType == "Plate")
 											H.Dura -= rand(0.3,0.6)
 											MainWeapon.Dura -= rand(0.1,0.3)
 											StunChance += rand(1,3)
 											if(ArmourOpening == 0)
 												ArmourOpening = prob(5 - H.Dura / 20)
-										if(H.DefenceType == "Chain")
+										if(H.DefenseType == "Chain")
 											H.Dura -= rand(0.1,0.3)
 											MainWeapon.Dura -= rand(0.1,0.3)
 											StunChance += rand(1,3)
-										if(H.DefenceType == "Leather")
+										if(H.DefenseType == "Leather")
 											H.Dura -= rand(0.1,0.2)
 											MainWeapon.Dura -= rand(0.1,0.2)
 											Damage = Damage / 1.2
 											StunChance += rand(1,2)
-										if(H.DefenceType == "Cloth")
+										if(H.DefenseType == "Cloth")
 											H.Dura -= rand(0.1,0.3)
 											StunChance += rand(2,4)
 									if(MainWeapon.DamageType == "Pierce")
-										if(H.DefenceType == "Plate")
+										if(H.DefenseType == "Plate")
 											H.Dura -= rand(0.1,0.2)
 											MainWeapon.Dura -= rand(0.4,0.6)
 											Damage = Damage / 1.3
 											if(ArmourOpening == 0)
 												ArmourOpening = prob(5 - H.Dura / 20)
-										if(H.DefenceType == "Chain")
+										if(H.DefenseType == "Chain")
 											H.Dura -= rand(0.1,0.3)
 											MainWeapon.Dura -= rand(0.2,0.4)
 											Damage = Damage / 1.2
-										if(H.DefenceType == "Leather")
+										if(H.DefenseType == "Leather")
 											H.Dura -= rand(0.2,0.3)
 											MainWeapon.Dura -= rand(0.1,0.2)
 											Damage = Damage / 1.1
-										if(H.DefenceType == "Cloth")
+										if(H.DefenseType == "Cloth")
 											H.Dura -= rand(0.3,0.8)
 									T.CheckArmourDura()
 									src.CheckWeaponDura(MainWeapon)
@@ -3558,69 +3568,69 @@ mob
 										src.Claws -= rand(0.1,1)
 										if(src.Claws <= 0)
 											src.Claws = 0
-									if(H.DefenceType == "Plate")
+									if(H.DefenseType == "Plate")
 										if(ArmourOpening == 0)
 											ArmourOpening = prob(5 - H.Dura / 20)
 								if(ArmourOpening == 0)
-									Damage -= H.Defence
+									Damage -= H.Defense
 								if(ArmourOpening)
-									Damage -= H.Defence / rand(1.1,7)
+									Damage -= H.Defense / rand(1.1,7)
 									ArmourOpening = 0
 							if(T.WLeftHand)
 								var/obj/H = T.WLeftHand
 								if(MainWeapon)
 									if(MainWeapon.DamageType == "Slash")
-										if(H.DefenceType == "Plate")
+										if(H.DefenseType == "Plate")
 											H.Dura -= rand(0.1,0.3)
 											MainWeapon.Dura -= rand(0.3,0.6)
 											Damage = Damage / 1.2
 											if(ArmourOpening == 0)
 												ArmourOpening = prob(5 - H.Dura / 20)
-										if(H.DefenceType == "Chain")
+										if(H.DefenseType == "Chain")
 											H.Dura -= rand(0.2,0.3)
 											MainWeapon.Dura -= rand(0.2,0.4)
 											Damage = Damage / 1.1
-										if(H.DefenceType == "Leather")
+										if(H.DefenseType == "Leather")
 											H.Dura -= rand(0.3,0.4)
 											MainWeapon.Dura -= rand(0.1,0.2)
 											Damage = Damage / 1.1
-										if(H.DefenceType == "Cloth")
+										if(H.DefenseType == "Cloth")
 											H.Dura -= rand(0.5,1)
 									if(MainWeapon.DamageType == "Blunt")
-										if(H.DefenceType == "Plate")
+										if(H.DefenseType == "Plate")
 											H.Dura -= rand(0.3,0.6)
 											MainWeapon.Dura -= rand(0.1,0.3)
 											StunChance += rand(1,3)
 											if(ArmourOpening == 0)
 												ArmourOpening = prob(5 - H.Dura / 20)
-										if(H.DefenceType == "Chain")
+										if(H.DefenseType == "Chain")
 											H.Dura -= rand(0.1,0.3)
 											MainWeapon.Dura -= rand(0.1,0.3)
 											StunChance += rand(1,3)
-										if(H.DefenceType == "Leather")
+										if(H.DefenseType == "Leather")
 											H.Dura -= rand(0.1,0.2)
 											MainWeapon.Dura -= rand(0.1,0.2)
 											Damage = Damage / 1.2
 											StunChance += rand(1,2)
-										if(H.DefenceType == "Cloth")
+										if(H.DefenseType == "Cloth")
 											H.Dura -= rand(0.1,0.3)
 											StunChance += rand(2,4)
 									if(MainWeapon.DamageType == "Pierce")
-										if(H.DefenceType == "Plate")
+										if(H.DefenseType == "Plate")
 											H.Dura -= rand(0.1,0.2)
 											MainWeapon.Dura -= rand(0.4,0.6)
 											Damage = Damage / 1.3
 											if(ArmourOpening == 0)
 												ArmourOpening = prob(5 - H.Dura / 20)
-										if(H.DefenceType == "Chain")
+										if(H.DefenseType == "Chain")
 											H.Dura -= rand(0.1,0.3)
 											MainWeapon.Dura -= rand(0.2,0.4)
 											Damage = Damage / 1.2
-										if(H.DefenceType == "Leather")
+										if(H.DefenseType == "Leather")
 											H.Dura -= rand(0.2,0.3)
 											MainWeapon.Dura -= rand(0.1,0.2)
 											Damage = Damage / 1.1
-										if(H.DefenceType == "Cloth")
+										if(H.DefenseType == "Cloth")
 											H.Dura -= rand(0.3,0.8)
 									T.CheckArmourDura()
 									src.CheckWeaponDura(MainWeapon)
@@ -3638,13 +3648,13 @@ mob
 										src.Claws -= rand(0.1,1)
 										if(src.Claws <= 0)
 											src.Claws = 0
-									if(H.DefenceType == "Plate")
+									if(H.DefenseType == "Plate")
 										if(ArmourOpening == 0)
 											ArmourOpening = prob(5 - H.Dura / 20)
 								if(ArmourOpening == 0)
-									Damage -= H.Defence
+									Damage -= H.Defense
 								if(ArmourOpening)
-									Damage -= H.Defence / rand(1.1,7)
+									Damage -= H.Defense / rand(1.1,7)
 									ArmourOpening = 0
 							if(Damage >= 0)
 								var/Stunned = prob(StunChance)
@@ -3693,8 +3703,8 @@ mob
 												CanSlice = 1
 										if(src.Claws && src.Weapon == null)
 											CanSlice = 1
-										if(A.DefenceType != "Plate")
-											if(A.DefenceType != "Chain")
+										if(A.DefenseType != "Plate")
+											if(A.DefenseType != "Chain")
 												if(CanSlice)
 													T.LeftArm = 0
 													if(T.WoundLeftArm)
@@ -3771,57 +3781,57 @@ mob
 								var/obj/H = T.WShoulders
 								if(MainWeapon)
 									if(MainWeapon.DamageType == "Slash")
-										if(H.DefenceType == "Plate")
+										if(H.DefenseType == "Plate")
 											H.Dura -= rand(0.1,0.3)
 											MainWeapon.Dura -= rand(0.3,0.6)
 											Damage = Damage / 1.2
 											if(ArmourOpening == 0)
 												ArmourOpening = prob(5 - H.Dura / 20)
-										if(H.DefenceType == "Chain")
+										if(H.DefenseType == "Chain")
 											H.Dura -= rand(0.2,0.3)
 											MainWeapon.Dura -= rand(0.2,0.4)
 											Damage = Damage / 1.1
-										if(H.DefenceType == "Leather")
+										if(H.DefenseType == "Leather")
 											H.Dura -= rand(0.3,0.4)
 											MainWeapon.Dura -= rand(0.1,0.2)
 											Damage = Damage / 1.1
-										if(H.DefenceType == "Cloth")
+										if(H.DefenseType == "Cloth")
 											H.Dura -= rand(0.5,1)
 									if(MainWeapon.DamageType == "Blunt")
-										if(H.DefenceType == "Plate")
+										if(H.DefenseType == "Plate")
 											H.Dura -= rand(0.3,0.6)
 											MainWeapon.Dura -= rand(0.1,0.3)
 											StunChance += rand(1,3)
 											if(ArmourOpening == 0)
 												ArmourOpening = prob(5 - H.Dura / 20)
-										if(H.DefenceType == "Chain")
+										if(H.DefenseType == "Chain")
 											H.Dura -= rand(0.1,0.3)
 											MainWeapon.Dura -= rand(0.1,0.3)
 											StunChance += rand(1,3)
-										if(H.DefenceType == "Leather")
+										if(H.DefenseType == "Leather")
 											H.Dura -= rand(0.1,0.2)
 											MainWeapon.Dura -= rand(0.1,0.2)
 											Damage = Damage / 1.2
 											StunChance += rand(1,2)
-										if(H.DefenceType == "Cloth")
+										if(H.DefenseType == "Cloth")
 											H.Dura -= rand(0.1,0.3)
 											StunChance += rand(2,4)
 									if(MainWeapon.DamageType == "Pierce")
-										if(H.DefenceType == "Plate")
+										if(H.DefenseType == "Plate")
 											H.Dura -= rand(0.1,0.2)
 											MainWeapon.Dura -= rand(0.4,0.6)
 											Damage = Damage / 1.3
 											if(ArmourOpening == 0)
 												ArmourOpening = prob(5 - H.Dura / 20)
-										if(H.DefenceType == "Chain")
+										if(H.DefenseType == "Chain")
 											H.Dura -= rand(0.1,0.3)
 											MainWeapon.Dura -= rand(0.2,0.4)
 											Damage = Damage / 1.2
-										if(H.DefenceType == "Leather")
+										if(H.DefenseType == "Leather")
 											H.Dura -= rand(0.2,0.3)
 											MainWeapon.Dura -= rand(0.1,0.2)
 											Damage = Damage / 1.1
-										if(H.DefenceType == "Cloth")
+										if(H.DefenseType == "Cloth")
 											H.Dura -= rand(0.3,0.8)
 									T.CheckArmourDura()
 									src.CheckWeaponDura(MainWeapon)
@@ -3839,69 +3849,69 @@ mob
 										src.Claws -= rand(0.1,1)
 										if(src.Claws <= 0)
 											src.Claws = 0
-									if(H.DefenceType == "Plate")
+									if(H.DefenseType == "Plate")
 										if(ArmourOpening == 0)
 											ArmourOpening = prob(5 - H.Dura / 20)
 								if(ArmourOpening == 0)
-									Damage -= H.Defence
+									Damage -= H.Defense
 								if(ArmourOpening)
-									Damage -= H.Defence / rand(1.1,7)
+									Damage -= H.Defense / rand(1.1,7)
 									ArmourOpening = 0
 							if(T.WRightHand)
 								var/obj/H = T.WRightHand
 								if(MainWeapon)
 									if(MainWeapon.DamageType == "Slash")
-										if(H.DefenceType == "Plate")
+										if(H.DefenseType == "Plate")
 											H.Dura -= rand(0.1,0.3)
 											MainWeapon.Dura -= rand(0.3,0.6)
 											Damage = Damage / 1.2
 											if(ArmourOpening == 0)
 												ArmourOpening = prob(5 - H.Dura / 20)
-										if(H.DefenceType == "Chain")
+										if(H.DefenseType == "Chain")
 											H.Dura -= rand(0.2,0.3)
 											MainWeapon.Dura -= rand(0.2,0.4)
 											Damage = Damage / 1.1
-										if(H.DefenceType == "Leather")
+										if(H.DefenseType == "Leather")
 											H.Dura -= rand(0.3,0.4)
 											MainWeapon.Dura -= rand(0.1,0.2)
 											Damage = Damage / 1.1
-										if(H.DefenceType == "Cloth")
+										if(H.DefenseType == "Cloth")
 											H.Dura -= rand(0.5,1)
 									if(MainWeapon.DamageType == "Blunt")
-										if(H.DefenceType == "Plate")
+										if(H.DefenseType == "Plate")
 											H.Dura -= rand(0.3,0.6)
 											MainWeapon.Dura -= rand(0.1,0.3)
 											StunChance += rand(1,3)
 											if(ArmourOpening == 0)
 												ArmourOpening = prob(5 - H.Dura / 20)
-										if(H.DefenceType == "Chain")
+										if(H.DefenseType == "Chain")
 											H.Dura -= rand(0.1,0.3)
 											MainWeapon.Dura -= rand(0.1,0.3)
 											StunChance += rand(1,3)
-										if(H.DefenceType == "Leather")
+										if(H.DefenseType == "Leather")
 											H.Dura -= rand(0.1,0.2)
 											MainWeapon.Dura -= rand(0.1,0.2)
 											Damage = Damage / 1.2
 											StunChance += rand(1,2)
-										if(H.DefenceType == "Cloth")
+										if(H.DefenseType == "Cloth")
 											H.Dura -= rand(0.1,0.3)
 											StunChance += rand(2,4)
 									if(MainWeapon.DamageType == "Pierce")
-										if(H.DefenceType == "Plate")
+										if(H.DefenseType == "Plate")
 											H.Dura -= rand(0.1,0.2)
 											MainWeapon.Dura -= rand(0.4,0.6)
 											Damage = Damage / 1.3
 											if(ArmourOpening == 0)
 												ArmourOpening = prob(5 - H.Dura / 20)
-										if(H.DefenceType == "Chain")
+										if(H.DefenseType == "Chain")
 											H.Dura -= rand(0.1,0.3)
 											MainWeapon.Dura -= rand(0.2,0.4)
 											Damage = Damage / 1.2
-										if(H.DefenceType == "Leather")
+										if(H.DefenseType == "Leather")
 											H.Dura -= rand(0.2,0.3)
 											MainWeapon.Dura -= rand(0.1,0.2)
 											Damage = Damage / 1.1
-										if(H.DefenceType == "Cloth")
+										if(H.DefenseType == "Cloth")
 											H.Dura -= rand(0.3,0.8)
 									T.CheckArmourDura()
 									src.CheckWeaponDura(MainWeapon)
@@ -3919,13 +3929,13 @@ mob
 										src.Claws -= rand(0.1,1)
 										if(src.Claws <= 0)
 											src.Claws = 0
-									if(H.DefenceType == "Plate")
+									if(H.DefenseType == "Plate")
 										if(ArmourOpening == 0)
 											ArmourOpening = prob(5 - H.Dura / 20)
 								if(ArmourOpening == 0)
-									Damage -= H.Defence
+									Damage -= H.Defense
 								if(ArmourOpening)
-									Damage -= H.Defence / rand(1.1,7)
+									Damage -= H.Defense / rand(1.1,7)
 									ArmourOpening = 0
 							if(Damage >= 0)
 								var/Stunned = prob(StunChance)
@@ -3973,8 +3983,8 @@ mob
 												CanSlice = 1
 										if(src.Claws && src.Weapon == null)
 											CanSlice = 1
-										if(A.DefenceType != "Plate")
-											if(A.DefenceType != "Chain")
+										if(A.DefenseType != "Plate")
+											if(A.DefenseType != "Chain")
 												if(CanSlice)
 													T.RightArm = 0
 													if(T.WoundRightArm)
@@ -4053,57 +4063,57 @@ mob
 								return
 							if(MainWeapon)
 								if(MainWeapon.DamageType == "Slash")
-									if(H.DefenceType == "Plate")
+									if(H.DefenseType == "Plate")
 										H.Dura -= rand(0.1,0.3)
 										MainWeapon.Dura -= rand(0.3,0.6)
 										Damage = Damage / 1.2
 										if(ArmourOpening == 0)
 											ArmourOpening = prob(5 - H.Dura / 20)
-									if(H.DefenceType == "Chain")
+									if(H.DefenseType == "Chain")
 										H.Dura -= rand(0.2,0.3)
 										MainWeapon.Dura -= rand(0.2,0.4)
 										Damage = Damage / 1.1
-									if(H.DefenceType == "Leather")
+									if(H.DefenseType == "Leather")
 										H.Dura -= rand(0.3,0.4)
 										MainWeapon.Dura -= rand(0.1,0.2)
 										Damage = Damage / 1.1
-									if(H.DefenceType == "Cloth")
+									if(H.DefenseType == "Cloth")
 										H.Dura -= rand(0.5,1)
 								if(MainWeapon.DamageType == "Blunt")
-									if(H.DefenceType == "Plate")
+									if(H.DefenseType == "Plate")
 										H.Dura -= rand(0.3,0.6)
 										MainWeapon.Dura -= rand(0.1,0.3)
 										StunChance += rand(1,3)
 										if(ArmourOpening == 0)
 											ArmourOpening = prob(5 - H.Dura / 20)
-									if(H.DefenceType == "Chain")
+									if(H.DefenseType == "Chain")
 										H.Dura -= rand(0.1,0.3)
 										MainWeapon.Dura -= rand(0.1,0.3)
 										StunChance += rand(1,3)
-									if(H.DefenceType == "Leather")
+									if(H.DefenseType == "Leather")
 										H.Dura -= rand(0.1,0.2)
 										MainWeapon.Dura -= rand(0.1,0.2)
 										Damage = Damage / 1.2
 										StunChance += rand(1,2)
-									if(H.DefenceType == "Cloth")
+									if(H.DefenseType == "Cloth")
 										H.Dura -= rand(0.1,0.3)
 										StunChance += rand(2,4)
 								if(MainWeapon.DamageType == "Pierce")
-									if(H.DefenceType == "Plate")
+									if(H.DefenseType == "Plate")
 										H.Dura -= rand(0.1,0.2)
 										MainWeapon.Dura -= rand(0.4,0.6)
 										Damage = Damage / 1.3
 										if(ArmourOpening == 0)
 											ArmourOpening = prob(5 - H.Dura / 20)
-									if(H.DefenceType == "Chain")
+									if(H.DefenseType == "Chain")
 										H.Dura -= rand(0.1,0.3)
 										MainWeapon.Dura -= rand(0.2,0.4)
 										Damage = Damage / 1.2
-									if(H.DefenceType == "Leather")
+									if(H.DefenseType == "Leather")
 										H.Dura -= rand(0.2,0.3)
 										MainWeapon.Dura -= rand(0.1,0.2)
 										Damage = Damage / 1.1
-									if(H.DefenceType == "Cloth")
+									if(H.DefenseType == "Cloth")
 										H.Dura -= rand(0.3,0.8)
 								T.CheckArmourDura()
 								src.CheckWeaponDura(MainWeapon)
@@ -4121,13 +4131,13 @@ mob
 									src.Claws -= rand(0.1,1)
 									if(src.Claws <= 0)
 										src.Claws = 0
-								if(H.DefenceType == "Plate")
+								if(H.DefenseType == "Plate")
 									if(ArmourOpening == 0)
 										ArmourOpening = prob(5 - H.Dura / 20)
 							if(ArmourOpening == 0)
-								Damage -= H.Defence
+								Damage -= H.Defense
 							if(ArmourOpening)
-								Damage -= H.Defence / rand(1.1,7)
+								Damage -= H.Defense / rand(1.1,7)
 								ArmourOpening = 0
 
 						if(Damage >= 0)

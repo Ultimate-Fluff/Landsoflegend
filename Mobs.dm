@@ -88,7 +88,7 @@ mob
 							var/Harm = 33
 							if(src.WLeftFoot)
 								var/obj/O = src.WLeftFoot
-								Harm -= O.Defence
+								Harm -= O.Defense
 							var/Harms = prob(Harm)
 							if(Harms)
 								src.Blood -= Dmg / 1.5
@@ -103,7 +103,7 @@ mob
 							var/Harm = 33
 							if(src.WRightFoot)
 								var/obj/O = src.WRightFoot
-								Harm -= O.Defence
+								Harm -= O.Defense
 							var/Harms = prob(Harm)
 							if(Harms)
 								src.Blood -= Dmg / 1.5
@@ -118,7 +118,7 @@ mob
 							var/Harm = 33
 							if(src.WLeftHand)
 								var/obj/O = src.WLeftHand
-								Harm -= O.Defence
+								Harm -= O.Defense
 							var/Harms = prob(Harm)
 							if(Harms)
 								src.Blood -= Dmg / 1.5
@@ -133,7 +133,7 @@ mob
 							var/Harm = 33
 							if(src.WRightHand)
 								var/obj/O = src.WRightHand
-								Harm -= O.Defence
+								Harm -= O.Defense
 							var/Harms = prob(Harm)
 							if(Harms)
 								src.Blood -= Dmg / 1.5
@@ -614,8 +614,8 @@ mob
 
 				Blood = 110
 				BloodMax = 110
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				Faction = "Human Empire"
 
@@ -654,8 +654,8 @@ mob
 										Val += 20
 									if(I.Quality)
 										Val += I.Quality / 1.5
-									if(I.Defence)
-										Val += I.Defence / 2
+									if(I.Defense)
+										Val += I.Defense / 2
 									var/RoundedVal = round(Val)
 									src.Speak("Ah, I see you've chosen a [I], a fine choice indeed! That item has a total Value of about [RoundedVal] Gold Coins.",7)
 									var/list/menu = new()
@@ -824,8 +824,8 @@ mob
 
 				Blood = 110
 				BloodMax = 110
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				Faction = "Human Empire"
 
@@ -949,8 +949,8 @@ mob
 
 				Blood = 110
 				BloodMax = 110
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				Faction = "Human Empire"
 
@@ -1068,8 +1068,8 @@ mob
 
 				Blood = 100
 				BloodMax = 100
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				Faction = "Human Empire"
 
@@ -1205,8 +1205,8 @@ mob
 
 				Blood = 110
 				BloodMax = 110
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				Faction = "Human Empire"
 
@@ -1386,8 +1386,8 @@ mob
 
 				Blood = 120
 				BloodMax = 120
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				Faction = "Altherian Empire"
 
@@ -1415,7 +1415,7 @@ mob
 							L.Move(src)
 
 							R.Material = "Cloth"
-							R.Defence = 3
+							R.Defense = 3
 							L.Material = "Iron"
 							L.RandomItemQuality()
 							RB.Material = "Iron"
@@ -1452,7 +1452,7 @@ mob
 							src.GuardAI()
 							src.Regen()
 							src.GiveName()
-							src.Ressurect()
+							src.Resurrect()
 							src.name = "[src.name] The Priest"
 			Altherian_Guardsman
 				icon = 'elf.dmi'
@@ -1520,8 +1520,8 @@ mob
 
 				Blood = 110
 				BloodMax = 110
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				Faction = "Altherian Empire"
 
@@ -1694,8 +1694,8 @@ mob
 
 				Blood = 110
 				BloodMax = 110
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 				Faction = "Altherian Empire"
 
 				HateList = list("Illithid Cultists","Gremlin Hordes","Kobold Hordes","Dragons","Undead","Chaos","Demonic Legions","Dangerous Beasts","Ratling Hordes","Cyclops Hordes","Goblin Hordes","Spider Hordes","Snakeman Empire","Human Empire Unholy")
@@ -1733,8 +1733,8 @@ mob
 										Val += 20
 									if(I.Quality)
 										Val += I.Quality / 1.5
-									if(I.Defence)
-										Val += I.Defence / 2
+									if(I.Defense)
+										Val += I.Defense / 2
 									var/RoundedVal = round(Val)
 									src.Speak("Ah, I see you've chosen a [I], a fine choice indeed! That item has a total Value of about [RoundedVal] Gold Coins.",7)
 									var/list/menu = new()
@@ -1907,8 +1907,8 @@ mob
 
 				Blood = 100
 				BloodMax = 100
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				Faction = "Altherian Empire"
 
@@ -2082,8 +2082,8 @@ mob
 
 				Blood = 110
 				BloodMax = 110
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				Faction = "Altherian Empire"
 
@@ -2255,8 +2255,8 @@ mob
 
 				Blood = 120
 				BloodMax = 120
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				Faction = "Human Empire"
 
@@ -2412,8 +2412,8 @@ mob
 
 				Blood = 120
 				BloodMax = 120
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				Faction = "Human Empire"
 
@@ -2569,8 +2569,8 @@ mob
 
 				Blood = 110
 				BloodMax = 110
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				Faction = "Human Empire"
 
@@ -2756,8 +2756,8 @@ mob
 
 				Blood = 130
 				BloodMax = 130
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				Faction = "Stahlite Empire"
 
@@ -2777,70 +2777,70 @@ mob
 					var/obj/Items/Armour/Chest/SmallChainShirt/IC = new
 					IC.Material = "Gold"
 					IC.RandomItemQuality()
-					IC.Defence = 10
+					IC.Defense = 10
 					src.WChest = IC
 					IC.suffix = "Equip"
 					IC.Move(src)
 					var/obj/Items/Armour/Legs/SmallChainLeggings/LL = new
 					LL.Material = "Gold"
 					LL.RandomItemQuality()
-					LL.Defence = 10
+					LL.Defense = 10
 					src.WLegs = LL
 					LL.suffix = "Equip"
 					LL.Move(src)
 					var/obj/Items/Armour/UpperBody/SmallChestPlate/C = new
 					C.Material = "Gold"
 					C.RandomItemQuality()
-					C.Defence = 10
+					C.Defense = 10
 					src.WUpperBody = C
 					C.suffix = "Equip"
 					C.Move(src)
 					var/obj/Items/Armour/Head/SmallDwarvenHelmet3/H = new
 					H.Material = "Gold"
 					H.RandomItemQuality()
-					H.Defence = 10
+					H.Defense = 10
 					src.WHead = H
 					H.suffix = "Equip"
 					H.Move(src)
 					var/obj/Items/Armour/LeftArm/SmallPlateGauntletLeft/LG = new
 					LG.Material = "Gold"
 					LG.RandomItemQuality()
-					LG.Defence = 10
+					LG.Defense = 10
 					src.WLeftHand = LG
 					LG.suffix = "Equip"
 					LG.Move(src)
 					var/obj/Items/Armour/RightArm/SmallPlateGauntletRight/RG = new
 					RG.Material = "Gold"
 					RG.RandomItemQuality()
-					RG.Defence = 10
+					RG.Defense = 10
 					src.WLeftHand = RG
 					RG.suffix = "Equip"
 					RG.Move(src)
 					var/obj/Items/Armour/RightFoot/SmallPlateBootRight/RB = new
 					RB.Material = "Gold"
 					RB.RandomItemQuality()
-					RB.Defence = 10
+					RB.Defense = 10
 					src.WLeftHand = RB
 					RB.suffix = "Equip"
 					RB.Move(src)
 					var/obj/Items/Armour/LeftFoot/SmallPlateBootLeft/LB = new
 					LB.Material = "Gold"
 					LB.RandomItemQuality()
-					LB.Defence = 10
+					LB.Defense = 10
 					src.WLeftHand = LB
 					LB.suffix = "Equip"
 					LB.Move(src)
 					var/obj/Items/Armour/Waist/SmallPlateBelt/B = new
 					B.Material = "Gold"
 					B.RandomItemQuality()
-					B.Defence = 10
+					B.Defense = 10
 					src.WLeftHand = B
 					B.suffix = "Equip"
 					B.Move(src)
 					var/obj/Items/Armour/Shoulders/SmallPlatePauldrons/S = new
 					S.Material = "Gold"
 					S.RandomItemQuality()
-					S.Defence = 10
+					S.Defense = 10
 					src.WShoulders = S
 					S.suffix = "Equip"
 					S.Move(src)
@@ -2933,8 +2933,8 @@ mob
 
 				Blood = 130
 				BloodMax = 130
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				Faction = "Stahlite Empire"
 
@@ -2973,8 +2973,8 @@ mob
 										Val += 20
 									if(I.Quality)
 										Val += I.Quality / 1.5
-									if(I.Defence)
-										Val += I.Defence / 2
+									if(I.Defense)
+										Val += I.Defense / 2
 									var/RoundedVal = round(Val)
 									src.Speak("Ah, I see you've chosen a [I], a fine choice my friend! That item has a total Value of about [RoundedVal] Gold Coins.",7)
 									var/list/menu = new()
@@ -3034,70 +3034,70 @@ mob
 							var/obj/Items/Armour/Chest/SmallChainShirt/IC = new
 							IC.Material = "Iron"
 							IC.RandomItemQuality()
-							IC.Defence = 10
+							IC.Defense = 10
 							src.WChest = IC
 							IC.suffix = "Equip"
 							IC.Move(src)
 							var/obj/Items/Armour/Legs/SmallChainLeggings/LL = new
 							LL.Material = "Iron"
 							LL.RandomItemQuality()
-							LL.Defence = 10
+							LL.Defense = 10
 							src.WLegs = LL
 							LL.suffix = "Equip"
 							LL.Move(src)
 							var/obj/Items/Armour/UpperBody/SmallChestPlate/C = new
 							C.Material = "Iron"
 							C.RandomItemQuality()
-							C.Defence = 10
+							C.Defense = 10
 							src.WUpperBody = C
 							C.suffix = "Equip"
 							C.Move(src)
 							var/obj/Items/Armour/Head/SmallDwarvenHelmet3/H = new
 							H.Material = "Iron"
 							H.RandomItemQuality()
-							H.Defence = 10
+							H.Defense = 10
 							src.WHead = H
 							H.suffix = "Equip"
 							H.Move(src)
 							var/obj/Items/Armour/LeftArm/SmallPlateGauntletLeft/LG = new
 							LG.Material = "Iron"
 							LG.RandomItemQuality()
-							LG.Defence = 10
+							LG.Defense = 10
 							src.WLeftHand = LG
 							LG.suffix = "Equip"
 							LG.Move(src)
 							var/obj/Items/Armour/RightArm/SmallPlateGauntletRight/RG = new
 							RG.Material = "Iron"
 							RG.RandomItemQuality()
-							RG.Defence = 10
+							RG.Defense = 10
 							src.WLeftHand = RG
 							RG.suffix = "Equip"
 							RG.Move(src)
 							var/obj/Items/Armour/RightFoot/SmallPlateBootRight/RB = new
 							RB.Material = "Iron"
 							RB.RandomItemQuality()
-							RB.Defence = 10
+							RB.Defense = 10
 							src.WLeftHand = RB
 							RB.suffix = "Equip"
 							RB.Move(src)
 							var/obj/Items/Armour/LeftFoot/SmallPlateBootLeft/LB = new
 							LB.Material = "Iron"
 							LB.RandomItemQuality()
-							LB.Defence = 10
+							LB.Defense = 10
 							src.WLeftHand = LB
 							LB.suffix = "Equip"
 							LB.Move(src)
 							var/obj/Items/Armour/Waist/SmallPlateBelt/B = new
 							B.Material = "Iron"
 							B.RandomItemQuality()
-							B.Defence = 10
+							B.Defense = 10
 							src.WLeftHand = B
 							B.suffix = "Equip"
 							B.Move(src)
 							var/obj/Items/Armour/Shoulders/SmallPlatePauldrons/S = new
 							S.Material = "Iron"
 							S.RandomItemQuality()
-							S.Defence = 10
+							S.Defense = 10
 							src.WShoulders = S
 							S.suffix = "Equip"
 							S.Move(src)
@@ -3194,8 +3194,8 @@ mob
 
 				Blood = 130
 				BloodMax = 130
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				Faction = "Stahlite Empire"
 
@@ -3217,70 +3217,70 @@ mob
 							var/obj/Items/Armour/Chest/SmallChainShirt/IC = new
 							IC.Material = "Iron"
 							IC.RandomItemQuality()
-							IC.Defence = 10
+							IC.Defense = 10
 							src.WChest = IC
 							IC.suffix = "Equip"
 							IC.Move(src)
 							var/obj/Items/Armour/Legs/SmallChainLeggings/LL = new
 							LL.Material = "Iron"
 							LL.RandomItemQuality()
-							LL.Defence = 10
+							LL.Defense = 10
 							src.WLegs = LL
 							LL.suffix = "Equip"
 							LL.Move(src)
 							var/obj/Items/Armour/UpperBody/SmallChestPlate/C = new
 							C.Material = "Iron"
 							C.RandomItemQuality()
-							C.Defence = 10
+							C.Defense = 10
 							src.WUpperBody = C
 							C.suffix = "Equip"
 							C.Move(src)
 							var/obj/Items/Armour/Head/SmallDwarvenHelmet3/H = new
 							H.Material = "Iron"
 							H.RandomItemQuality()
-							H.Defence = 10
+							H.Defense = 10
 							src.WHead = H
 							H.suffix = "Equip"
 							H.Move(src)
 							var/obj/Items/Armour/LeftArm/SmallPlateGauntletLeft/LG = new
 							LG.Material = "Iron"
 							LG.RandomItemQuality()
-							LG.Defence = 10
+							LG.Defense = 10
 							src.WLeftHand = LG
 							LG.suffix = "Equip"
 							LG.Move(src)
 							var/obj/Items/Armour/RightArm/SmallPlateGauntletRight/RG = new
 							RG.Material = "Iron"
 							RG.RandomItemQuality()
-							RG.Defence = 10
+							RG.Defense = 10
 							src.WLeftHand = RG
 							RG.suffix = "Equip"
 							RG.Move(src)
 							var/obj/Items/Armour/RightFoot/SmallPlateBootRight/RB = new
 							RB.Material = "Iron"
 							RB.RandomItemQuality()
-							RB.Defence = 10
+							RB.Defense = 10
 							src.WLeftHand = RB
 							RB.suffix = "Equip"
 							RB.Move(src)
 							var/obj/Items/Armour/LeftFoot/SmallPlateBootLeft/LB = new
 							LB.Material = "Iron"
 							LB.RandomItemQuality()
-							LB.Defence = 10
+							LB.Defense = 10
 							src.WLeftHand = LB
 							LB.suffix = "Equip"
 							LB.Move(src)
 							var/obj/Items/Armour/Waist/SmallPlateBelt/B = new
 							B.Material = "Iron"
 							B.RandomItemQuality()
-							B.Defence = 10
+							B.Defense = 10
 							src.WLeftHand = B
 							B.suffix = "Equip"
 							B.Move(src)
 							var/obj/Items/Armour/Shoulders/SmallPlatePauldrons/S = new
 							S.Material = "Iron"
 							S.RandomItemQuality()
-							S.Defence = 10
+							S.Defense = 10
 							src.WShoulders = S
 							S.suffix = "Equip"
 							S.Move(src)
@@ -3370,8 +3370,8 @@ mob
 
 				Blood = 170
 				BloodMax = 170
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				Faction = "Human Empire"
 
@@ -3431,8 +3431,8 @@ mob
 							src.WLegs = L
 							src.Weapon = SW
 							for(var/obj/Items/Z in src)
-								if(Z.Defence)
-									Z.Defence = Z.Defence / 2
+								if(Z.Defense)
+									Z.Defense = Z.Defense / 2
 								Z.Dura = 100
 								Z.icon_state = Z.EquipState
 								Z.layer = Z.ItemLayer
@@ -3525,8 +3525,8 @@ mob
 
 				Blood = 170
 				BloodMax = 170
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				luminosity = 4
 
@@ -3593,8 +3593,8 @@ mob
 					T.EquipState = "[T.EquipState] left"
 					src.Weapon2 = T
 					for(var/obj/Items/Z in src)
-						if(Z.Defence)
-							Z.Defence = Z.Defence / 2
+						if(Z.Defense)
+							Z.Defense = Z.Defense / 2
 						Z.Dura = 100
 						Z.icon_state = Z.EquipState
 						Z.layer = Z.ItemLayer
@@ -3698,8 +3698,8 @@ mob
 
 				Blood = 200
 				BloodMax = 200
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				Faction = "Human Empire"
 
@@ -3758,8 +3758,8 @@ mob
 					T.EquipState = "[T.EquipState] left"
 					src.Weapon2 = T
 					for(var/obj/Items/Z in src)
-						if(Z.Defence)
-							Z.Defence = Z.Defence / 2
+						if(Z.Defense)
+							Z.Defense = Z.Defense / 2
 						Z.Dura = 100
 						Z.icon_state = Z.EquipState
 						Z.layer = Z.ItemLayer
@@ -3852,8 +3852,8 @@ mob
 
 				Blood = 250
 				BloodMax = 250
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				Faction = "None"
 				HateList = list()
@@ -3957,8 +3957,8 @@ mob
 
 				Blood = 200
 				BloodMax = 200
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				Faction = "Human Empire"
 
@@ -3998,7 +3998,7 @@ mob
 							src.InquisitiveAI()
 							src.Regen()
 							src.GiveName()
-							src.Ressurect()
+							src.Resurrect()
 							src.name = "[src.name] The Monk"
 			Human_Priest_of_Order
 				icon = 'human.dmi'
@@ -4062,8 +4062,8 @@ mob
 
 				Blood = 200
 				BloodMax = 200
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				Faction = "Human Empire"
 
@@ -4118,8 +4118,8 @@ mob
 							src.WHead = H
 							src.Weapon = SW
 							for(var/obj/Items/Z in src)
-								if(Z.Defence)
-									Z.Defence = Z.Defence / 2
+								if(Z.Defense)
+									Z.Defense = Z.Defense / 2
 								Z.Dura = 100
 								Z.icon_state = Z.EquipState
 								Z.layer = Z.ItemLayer
@@ -4142,7 +4142,7 @@ mob
 							src.GuardAI()
 							src.Regen()
 							src.GiveName()
-							src.Ressurect()
+							src.Resurrect()
 							src.name = "[src.name] The Priest"
 							var/obj/Items/Currency/GoldCoin/Gold = new
 							Gold.loc = src
@@ -4216,8 +4216,8 @@ mob
 
 					Blood = 666
 					BloodMax = 666
-					BloodColour = /obj/Misc/Gore/BloodSplat/
-					BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+					BloodColor = /obj/Misc/Gore/BloodSplat/
+					BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 					Soul = 0
 
@@ -4302,8 +4302,8 @@ mob
 
 					Blood = 300
 					BloodMax = 300
-					BloodColour = /obj/Misc/Gore/BloodSplat/
-					BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+					BloodColor = /obj/Misc/Gore/BloodSplat/
+					BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 					Soul = 0
 
@@ -4393,8 +4393,8 @@ mob
 
 					Blood = 200
 					BloodMax = 200
-					BloodColour = /obj/Misc/Gore/BloodSplat/
-					BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+					BloodColor = /obj/Misc/Gore/BloodSplat/
+					BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 					Soul = 0
 
@@ -4434,8 +4434,8 @@ mob
 
 					Type = "Egg"
 
-					BloodColour = /obj/Misc/Gore/GreenBloodSplat/
-					BloodWallColour = /obj/Misc/Gore/GreenWallBloodSplat/
+					BloodColor = /obj/Misc/Gore/GreenBloodSplat/
+					BloodWallColor = /obj/Misc/Gore/GreenWallBloodSplat/
 
 					HP = 200
 					HPMAX = 200
@@ -4507,8 +4507,8 @@ mob
 
 					Claws = 100
 
-					BloodColour = /obj/Misc/Gore/GreenBloodSplat/
-					BloodWallColour = /obj/Misc/Gore/GreenWallBloodSplat/
+					BloodColor = /obj/Misc/Gore/GreenBloodSplat/
+					BloodWallColor = /obj/Misc/Gore/GreenWallBloodSplat/
 
 					SpreadsAffliction = "Undead Bite"
 
@@ -4840,7 +4840,7 @@ mob
 								src.GuardLoc = src.loc
 								src.GuardDir = src.dir
 								src.GuardAI()
-								src.EvilRessurect()
+								src.EvilResurrect()
 								var/image/I = new('Target.dmi',src)
 								src.TargetIcon = I
 								var/obj/Items/Armour/Chest/Robe/CP = new
@@ -5111,8 +5111,8 @@ mob
 
 						Blood = 200
 						BloodMax = 200
-						BloodColour = /obj/Misc/Gore/BloodSplat/
-						BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+						BloodColor = /obj/Misc/Gore/BloodSplat/
+						BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 						HP = 400
 						HPMAX = 400
@@ -5196,8 +5196,8 @@ mob
 
 						Blood = 500
 						BloodMax = 500
-						BloodColour = /obj/Misc/Gore/BloodSplat/
-						BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+						BloodColor = /obj/Misc/Gore/BloodSplat/
+						BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 						HP = 1000
 						HPMAX = 1000
@@ -5273,8 +5273,8 @@ mob
 
 						Blood = 150
 						BloodMax = 150
-						BloodColour = /obj/Misc/Gore/BloodSplat/
-						BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+						BloodColor = /obj/Misc/Gore/BloodSplat/
+						BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 						Faction = "Snakeman Empire"
 
@@ -5358,8 +5358,8 @@ mob
 
 						Blood = 200
 						BloodMax = 200
-						BloodColour = /obj/Misc/Gore/BloodSplat/
-						BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+						BloodColor = /obj/Misc/Gore/BloodSplat/
+						BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 						Faction = "Dangerous Beasts"
 
@@ -5430,8 +5430,8 @@ mob
 
 					Blood = 20
 					BloodMax = 20
-					BloodColour = /obj/Misc/Gore/BloodSplat/
-					BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+					BloodColor = /obj/Misc/Gore/BloodSplat/
+					BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 					Faction = "Gremlin Hordes"
 
@@ -5527,8 +5527,8 @@ mob
 
 					Blood = 35
 					BloodMax = 35
-					BloodColour = /obj/Misc/Gore/BloodSplat/
-					BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+					BloodColor = /obj/Misc/Gore/BloodSplat/
+					BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 					Faction = "Kobold Hordes"
 
@@ -5640,8 +5640,8 @@ mob
 
 					Blood = 125
 					BloodMax = 125
-					BloodColour = /obj/Misc/Gore/BloodSplat/
-					BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+					BloodColor = /obj/Misc/Gore/BloodSplat/
+					BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 					Faction = "Orc Hordes"
 
@@ -5747,8 +5747,8 @@ mob
 
 					Blood = 45
 					BloodMax = 45
-					BloodColour = /obj/Misc/Gore/BloodSplat/
-					BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+					BloodColor = /obj/Misc/Gore/BloodSplat/
+					BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 					Soul = 0
 
@@ -5861,8 +5861,8 @@ mob
 
 					Blood = 50
 					BloodMax = 50
-					BloodColour = /obj/Misc/Gore/BloodSplat/
-					BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+					BloodColor = /obj/Misc/Gore/BloodSplat/
+					BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 					Faction = "Human Empire Unholy"
 
@@ -5994,8 +5994,8 @@ mob
 
 					Blood = 60
 					BloodMax = 60
-					BloodColour = /obj/Misc/Gore/BloodSplat/
-					BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+					BloodColor = /obj/Misc/Gore/BloodSplat/
+					BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 					Faction = "Human Empire Outlaw"
 
@@ -6146,8 +6146,8 @@ mob
 
 					Blood = 110
 					BloodMax = 110
-					BloodColour = /obj/Misc/Gore/BloodSplat/
-					BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+					BloodColor = /obj/Misc/Gore/BloodSplat/
+					BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 					Faction = "Dangerous Beasts"
 
@@ -6228,8 +6228,8 @@ mob
 
 					Blood = 135
 					BloodMax = 135
-					BloodColour = /obj/Misc/Gore/BloodSplat/
-					BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+					BloodColor = /obj/Misc/Gore/BloodSplat/
+					BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 					Faction = "Dangerous Beasts"
 
@@ -6246,7 +6246,7 @@ mob
 								src.BloodFlow()
 								src.GuardAI()
 								src.Regen()
-								src.Ressurect()
+								src.Resurrect()
 				Cyclops_Shaman
 					name = "{NPC} Cyclops Shaman"
 					icon = 'cyclops.dmi'
@@ -6312,8 +6312,8 @@ mob
 
 					Blood = 175
 					BloodMax = 175
-					BloodColour = /obj/Misc/Gore/BloodSplat/
-					BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+					BloodColor = /obj/Misc/Gore/BloodSplat/
+					BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 					Faction = "Cyclops Hordes"
 
@@ -6380,7 +6380,7 @@ mob
 								src.BloodFlow()
 								src.GuardAI()
 								src.Regen()
-								src.Ressurect()
+								src.Resurrect()
 				Cyclops_Guardsman_Patrol
 					icon = 'cyclops.dmi'
 					icon_state = "N"
@@ -6446,8 +6446,8 @@ mob
 
 					Blood = 160
 					BloodMax = 160
-					BloodColour = /obj/Misc/Gore/BloodSplat/
-					BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+					BloodColor = /obj/Misc/Gore/BloodSplat/
+					BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 					Faction = "Cyclops Hordes"
 
@@ -6589,8 +6589,8 @@ mob
 
 					Blood = 160
 					BloodMax = 160
-					BloodColour = /obj/Misc/Gore/BloodSplat/
-					BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+					BloodColor = /obj/Misc/Gore/BloodSplat/
+					BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 					Faction = "Cyclops Hordes"
 
@@ -6737,8 +6737,8 @@ mob
 
 					Blood = 75
 					BloodMax = 75
-					BloodColour = /obj/Misc/Gore/BloodSplat/
-					BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+					BloodColor = /obj/Misc/Gore/BloodSplat/
+					BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 					CanRegenLimbs = 1
 					Claws = 100
 
@@ -6816,8 +6816,8 @@ mob
 
 					Blood = 125
 					BloodMax = 125
-					BloodColour = /obj/Misc/Gore/BloodSplat/
-					BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+					BloodColor = /obj/Misc/Gore/BloodSplat/
+					BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 					Faction = "Cyclops Hordes"
 
@@ -6856,8 +6856,8 @@ mob
 
 					Blood = 100
 					BloodMax = 100
-					BloodColour = /obj/Misc/Gore/GreenBloodSplat/
-					BloodWallColour = /obj/Misc/Gore/GreenWallBloodSplat/
+					BloodColor = /obj/Misc/Gore/GreenBloodSplat/
+					BloodWallColor = /obj/Misc/Gore/GreenWallBloodSplat/
 
 					HP = 100
 					HPMAX = 100
@@ -6931,8 +6931,8 @@ mob
 
 					Blood = 135
 					BloodMax = 135
-					BloodColour = /obj/Misc/Gore/BloodSplat/
-					BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+					BloodColor = /obj/Misc/Gore/BloodSplat/
+					BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 					HP = 200
 					HPMAX = 200
@@ -6989,8 +6989,8 @@ mob
 
 					Blood = 35
 					BloodMax = 35
-					BloodColour = /obj/Misc/Gore/BloodSplat/
-					BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+					BloodColor = /obj/Misc/Gore/BloodSplat/
+					BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 					HP = 40
 					HPMAX = 40
@@ -7054,8 +7054,8 @@ mob
 
 					Blood = 200
 					BloodMax = 200
-					BloodColour = /obj/Misc/Gore/GreenBloodSplat/
-					BloodWallColour = /obj/Misc/Gore/GreenWallBloodSplat/
+					BloodColor = /obj/Misc/Gore/GreenBloodSplat/
+					BloodWallColor = /obj/Misc/Gore/GreenWallBloodSplat/
 
 					HP = 200
 					HPMAX = 200
@@ -7113,8 +7113,8 @@ mob
 
 					Blood = 50
 					BloodMax = 50
-					BloodColour = /obj/Misc/Gore/GreenBloodSplat/
-					BloodWallColour = /obj/Misc/Gore/GreenWallBloodSplat/
+					BloodColor = /obj/Misc/Gore/GreenBloodSplat/
+					BloodWallColor = /obj/Misc/Gore/GreenWallBloodSplat/
 
 					HP = 75
 					HPMAX = 75
@@ -7172,8 +7172,8 @@ mob
 
 					Blood = 100
 					BloodMax = 100
-					BloodColour = /obj/Misc/Gore/GreenBloodSplat/
-					BloodWallColour = /obj/Misc/Gore/GreenWallBloodSplat/
+					BloodColor = /obj/Misc/Gore/GreenBloodSplat/
+					BloodWallColor = /obj/Misc/Gore/GreenWallBloodSplat/
 
 					HP = 150
 					HPMAX = 150
@@ -7230,8 +7230,8 @@ mob
 
 					Blood = 60
 					BloodMax = 60
-					BloodColour = /obj/Misc/Gore/BloodSplat/
-					BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+					BloodColor = /obj/Misc/Gore/BloodSplat/
+					BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 					HP = 100
 					HPMAX = 100
@@ -7287,8 +7287,8 @@ mob
 
 					Blood = 30
 					BloodMax = 30
-					BloodColour = /obj/Misc/Gore/BloodSplat/
-					BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+					BloodColor = /obj/Misc/Gore/BloodSplat/
+					BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 					HP = 15
 					HPMAX = 15
@@ -7375,8 +7375,8 @@ mob
 
 					Blood = 110
 					BloodMax = 110
-					BloodColour = /obj/Misc/Gore/BloodSplat/
-					BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+					BloodColor = /obj/Misc/Gore/BloodSplat/
+					BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 					Faction = "Ratling Hordes"
 
 					HateList = list("Illithid Cultists","Lizardman Tribes","Gremlin Hordes","Kobold Hordes","Stahlite Empire","Frogmen Hordes","Giant Hordes","Altherian Empire","Dragons","Undead","Human Empire","Demonic Legions","Dangerous Beasts","Cyclops Hordes","Goblin Hordes","Spider Hordes","Snakeman Empire","Neutral","Human Empire Unholy","Human Empire Outlaw")
@@ -7414,8 +7414,8 @@ mob
 											Val += 20
 										if(I.Quality)
 											Val += I.Quality / 1.5
-										if(I.Defence)
-											Val += I.Defence / 2
+										if(I.Defense)
+											Val += I.Defense / 2
 										var/RoundedVal = round(Val)
 										src.Speak("You choose [I], good good! Give [RoundedVal] shinies!.",7)
 										var/list/menu = new()
@@ -7554,8 +7554,8 @@ mob
 
 					Blood = 40
 					BloodMax = 40
-					BloodColour = /obj/Misc/Gore/BloodSplat/
-					BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+					BloodColor = /obj/Misc/Gore/BloodSplat/
+					BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 					Faction = "Ratling Hordes"
 
@@ -7665,8 +7665,8 @@ mob
 
 					Blood = 110
 					BloodMax = 110
-					BloodColour = /obj/Misc/Gore/BloodSplat/
-					BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+					BloodColor = /obj/Misc/Gore/BloodSplat/
+					BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 					Faction = "Ratling Hordes"
 
@@ -7701,7 +7701,7 @@ mob
 						src.BloodFlow()
 						src.GuardAI()
 						src.Regen()
-						src.Ressurect()
+						src.Resurrect()
 						var/obj/Items/Currency/GoldCoin/Gold = new
 						Gold.loc = src
 						Gold.suffix = "Carried"
@@ -7775,8 +7775,8 @@ mob
 
 					Blood = 75
 					BloodMax = 75
-					BloodColour = /obj/Misc/Gore/BloodSplat/
-					BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+					BloodColor = /obj/Misc/Gore/BloodSplat/
+					BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 					Faction = "Ratling Hordes"
 
@@ -7911,8 +7911,8 @@ mob
 
 					Blood = 75
 					BloodMax = 75
-					BloodColour = /obj/Misc/Gore/BloodSplat/
-					BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+					BloodColor = /obj/Misc/Gore/BloodSplat/
+					BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 					Faction = "Ratling Hordes"
 
@@ -8046,8 +8046,8 @@ mob
 
 						Blood = 400
 						BloodMax = 400
-						BloodColour = /obj/Misc/Gore/BloodSplat/
-						BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+						BloodColor = /obj/Misc/Gore/BloodSplat/
+						BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 						HP = 500
 						HPMAX = 500
@@ -8126,7 +8126,7 @@ mob
 						L.WritePercent = 100
 						src.LangKnow += L
 						src.CurrentLanguage = L
-						src.Ressurect()
+						src.Resurrect()
 				Chaos_Entity
 					name = "{NPC} Chaos Entity"
 					icon = 'creatures.dmi'
@@ -8220,8 +8220,8 @@ mob
 
 					Blood = 200
 					BloodMax = 200
-					BloodColour = /obj/Misc/Gore/BloodSplat/
-					BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+					BloodColor = /obj/Misc/Gore/BloodSplat/
+					BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 					HP = 250
 					HPMAX = 250
@@ -8309,8 +8309,8 @@ mob
 
 				Blood = 125
 				BloodMax = 125
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				Faction = "Snakeman Empire"
 				HateList = list("Gremlin Hordes","Stahlite Empire","Kobold Hordes","Dragons","Undead","Chaos","Demonic Legions","Dangerous Beasts","Ratling Hordes","Cyclops Hordes","Goblin Hordes","Spider Hordes")
@@ -8438,8 +8438,8 @@ mob
 
 				Blood = 110
 				BloodMax = 110
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 				Faction = "Snakeman Empire"
 				HateList = list("Gremlin Hordes","Stahlite Empire","Kobold Hordes","Dragons","Undead","Chaos","Demonic Legions","Dangerous Beasts","Ratling Hordes","Cyclops Hordes","Goblin Hordes","Spider Hordes")
 				Click()
@@ -8476,8 +8476,8 @@ mob
 										Val += 20
 									if(I.Quality)
 										Val += I.Quality / 1.5
-									if(I.Defence)
-										Val += I.Defence / 2
+									if(I.Defense)
+										Val += I.Defense / 2
 									var/RoundedVal = round(Val)
 									src.Speak("Ah, I see you've chosen a [I], a fine choice indeed! That item has a total Value of about [RoundedVal] Gold Coins.",7)
 									var/list/menu = new()
@@ -8648,8 +8648,8 @@ mob
 
 				Blood = 125
 				BloodMax = 125
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				Faction = "Snakeman Empire"
 				HateList = list("Gremlin Hordes","Stahlite Empire","Kobold Hordes","Dragons","Undead","Chaos","Demonic Legions","Dangerous Beasts","Ratling Hordes","Cyclops Hordes","Goblin Hordes","Spider Hordes")
@@ -8784,8 +8784,8 @@ mob
 
 				Blood = 135
 				BloodMax = 135
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				Faction = "Snakeman Empire"
 				HateList = list("Gremlin Hordes","Stahlite Empire","Kobold Hordes","Dragons","Undead","Chaos","Demonic Legions","Dangerous Beasts","Ratling Hordes","Cyclops Hordes","Goblin Hordes","Spider Hordes")
@@ -8821,7 +8821,7 @@ mob
 							src.BloodFlow()
 							src.GuardAI()
 							src.Regen()
-							src.Ressurect()
+							src.Resurrect()
 			Snake
 				name = "{NPC} Snake"
 				icon = 'creatures.dmi'
@@ -8857,8 +8857,8 @@ mob
 
 				Blood = 20
 				BloodMax = 20
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				HP = 10
 				HPMAX = 10
@@ -8915,8 +8915,8 @@ mob
 
 				Blood = 15
 				BloodMax = 15
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				HP = 5
 				HPMAX = 5
@@ -8973,8 +8973,8 @@ mob
 
 				Blood = 25
 				BloodMax = 25
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				HP = 15
 				HPMAX = 15
@@ -9032,8 +9032,8 @@ mob
 
 				Blood = 25
 				BloodMax = 25
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				HP = 15
 				HPMAX = 15
@@ -9090,8 +9090,8 @@ mob
 
 				Blood = 25
 				BloodMax = 25
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				HP = 15
 				HPMAX = 15
@@ -9149,8 +9149,8 @@ mob
 
 				Blood = 35
 				BloodMax = 35
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				HP = 35
 				HPMAX = 35
@@ -9207,8 +9207,8 @@ mob
 
 				Blood = 35
 				BloodMax = 35
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				HP = 35
 				HPMAX = 35
@@ -9268,8 +9268,8 @@ mob
 
 				Blood = 60
 				BloodMax = 60
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				HP = 100
 				HPMAX = 100
@@ -9331,8 +9331,8 @@ mob
 
 				Blood = 35
 				BloodMax = 35
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				HP = 50
 				HPMAX = 50
@@ -9394,8 +9394,8 @@ mob
 
 				Blood = 50
 				BloodMax = 50
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				HP = 100
 				HPMAX = 100
@@ -9455,8 +9455,8 @@ mob
 
 				Blood = 50
 				BloodMax = 50
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				HP = 75
 				HPMAX = 75
@@ -9516,8 +9516,8 @@ mob
 
 				Blood = 75
 				BloodMax = 75
-				BloodColour = /obj/Misc/Gore/BloodSplat/
-				BloodWallColour = /obj/Misc/Gore/WallBloodSplat/
+				BloodColor = /obj/Misc/Gore/BloodSplat/
+				BloodWallColor = /obj/Misc/Gore/WallBloodSplat/
 
 				HP = 125
 				HPMAX = 125

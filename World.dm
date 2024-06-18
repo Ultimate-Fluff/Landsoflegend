@@ -14,7 +14,7 @@ world
 		LoadMisc()
 		CreateOre()
 		LoadMap()
-		DayNightCyle()
+		DayNightCycle()
 		var/Finish_Remote_Server_Access
 		for(var/turf/T in block(locate(98,42,3),locate(114,38,3)))
 			var/InTiles = 0
@@ -80,7 +80,6 @@ world
 	PublicNotes = "<font color = teal><u>.:Public Notes:.</u><p>Welcome to Lands of Legend. I'd like to first off say Sorry for taking so long to Update and Thank everyone for waiting.<p>This version will no doubt contain alot of bugs due to the fact alot of tweaks to the code have been made. For a full list of Updates, click your (?) Question Mark button once logged in. Please also use the Report Bugs Option as well, I always look at this when I log in and it always helps. Thanks again, Ginseng."
 	Rules = "<font color = teal><center><u>Rules</u><p>Before reading these rules, let me just remind you that these are here for everyone to see when they log in, so there is no excuse about not knowing the rules.<p>Rule One - Do NOT randomly kill Players, you may only attack people if you have warned them AND you have a Role Play Reason to attack them in the first place. A warning consists of you using the Role Play button and typing something along the lines of 'Blank swiftly extends their blade at Target and charges at them, with the intention of slashing them to bits' You would then allow at least Twenty (20) for the Target to reply. If the player says (Wait, I'm writing a reply RP!), then you must give them another 1(One) Minute to react, providing the first 1(One) Minute has already passed.<p>Rule Two - Do NOT use In Character (IC) Chat in Out of Character (OOC) Chat. This means no using in character information in out of character chat. This means you are not allowed give out locations of places, or speak of plans and/or events. Do not use OOC to Role-play with another player if you cannot find him/her. OOC chat is for asking for help, general chat, and greeting and/or checking if a certain player is online. No exceptions. <p>Rule Three - If you wish to speak Out of Character using the 'say' verb, put your text in parentheses (). <p>Rule Four - Keep your role play consistent, no turning evil suddenly or going crazy for no reason. This means you can’t suddenly become evil because someone evil asks you to join them when your actually a good person. If the guards in town attack you by default you generally have to RP an evil character. <p>Rule Five - Do NOT create Campfires in town. This will cause fire and get you banned! Admins know when a fire is created, so you will not get away with it. And do NOT burn player bodies, unless you have a RP reason. That is considered greifing, and will also result in a visit from the magical ban hammer fairy.<p>Rule Six – Don’t kill people or NPC’s for their items. Although you can obviously pick up items that a dead NPC drops, if you kill an NPC for his/her Items, and your not RPing a evil character, that is bad RP.<p>Rule Seven – Do not attack an NPC that is on your Side/Race/Faction unless it is has you trapped and wont move or you have a valid RP reason to do so. <p>Rule Eight - No foul language, spamming or trolling.<p>Rule Nine – If you are fighting another player, and you wish to flee you must RP running away using the Role-play Verb. The RP for a run must at least contain Seven(7) words, so you cant just say, 'Blank runs away from Attacker'. For Run RP's you do not need to give reaction time.<p> Rule Ten - You MUST Role-play the act of stealing an Item that belongs to someone else. you cannot grab an item that a blacksmith just created then flee. You will get punished for this. You will need to RP at least Six words for a steal RP, then give 1(One) Minute for the Victim to react.<p>Rule Elven - You MUST have a RP reason to destroy a building, damage it, block its door ways, or anything else that may cause distress to other players regarding housing.<p>Rule Twelve - Do NOT use information learned from a previous character with a newly made one, this means you can not remake with the same name and know everything you knew before. However, you can still have the same name, but you must inform people OOCly that you no longer know them or anything about them.<p>Rule Thirteen - You must give your character a proper Role-Play name that fits the setting. This means no using famous names from real life or other works of fiction, and no using futuristic sounding names. A properly named character will have both a first and a last name. Do not use titles such as 'King' 'Queen' or 't3h 1337' in your characters name. Admins can rename your character if they feel it has an inappropriate name.<p>Rule Fourteen - You can NEVER Role Play anything offensive that may upset someone OOCly, this includes Burning a book and saying its the Bible or Rapeing people RPly. <p>Rule Fifthteen - You must RP Burning or Cutting up a players corpse, the RP must at least contain Ten(10) words, and you must have a RP reason.<p>Notes - Failing to follow these SIMPLE rules will get you Deducted, with a boot and warning, then Ban if continued. - Admins keep logs of what players say, so if your Role Play sounds off, an Admin will find out, and will take action - Any Negative actions towards players needs to be Role Played, the victim must be given time to react, this is called reaction time, other wise the RP you do is void and can be ignored. If you catch somebody breaking these rules report it to an Admin, if no Admins are online, then note down the player who attacked you, their Key, the location it happened, Time, what happened, Why, ect.<p>"
 client
-	macro_mode=1
 	Southeast()
 		if(mob.Moving)
 			mob.Moving = 0
@@ -809,7 +808,7 @@ client
 		if(EventNum == null)
 			EventNum = rand(1,5)
 		if(EventNum == 1)
-			world << "<font color = yellow><b>From under the ground, hundreds upon hundreds of sounds could be heard. Thumps and pitter pattering of tiny feet, hordes of Ratling invaders forming an army and rushing through the dark underpaths of the known world. From every passage leading to the upper kingdoms, these creatures pour forth and attack the surface dwellers.<br>"
+			world << "<font color = yellow><b>From under the ground, hundreds upon hundreds of sounds could be heard. Thumps and pitter pattering of tiny feet, hordes of Ratling invaders forming an army and rushing through the dark sewers of the known world. From every passage leading to the upper kingdoms, these creatures pour forth and attack the surface dwellers.<br>"
 			for(var/obj/Misc/SewerGrate/G in world)
 				var/Invaders = rand(35,50)
 				while(Invaders)
@@ -822,7 +821,7 @@ client
 					var/mob/NPC/Evil/Chaos/Ratling_Assassin/A = new
 					A.loc = G.loc
 		if(EventNum == 2)
-			world << "<font color = yellow><b>A strange cold wind begins to blow as dark clouds form. Strange noises from under the ground could be heard across the country side. Dealthly screams, moans and voices echoe in all directions as the wind settles and a faint mist begins to set. From ancient graves the deceased begin to rise, grouping together and heading towards the living, hungry for flesh and vengence.<br>"
+			world << "<font color = yellow><b>A strange cold wind begins to blow as dark clouds form. Strange noises from under the ground could be heard across the country side. Horrid screams, moans and voices echo in all directions as the wind settles and a faint mist begins to set. From ancient graves the deceased begin to rise, grouping together and heading towards the living, hungry for flesh and vengeance.<br>"
 			for(var/obj/Items/Misc/GraveStone/G in world)
 				var/Skeletons = rand(2,5)
 				while(Skeletons)
@@ -830,7 +829,7 @@ client
 					var/mob/NPC/Evil/Undead/Undead_Skeleton/S = new
 					S.loc = G.loc
 		if(EventNum == 3)
-			world << "<font color = yellow><b>The number of bandits in the area begins to steadily increase accross the land. After a while, it becomes apprant to those who wander the country side that all is not well. Once in a while, the Bandit leaders decide to form up and attack the Human Kingdom and anyone else who got in their way, and this was one such gathering. The massive, but sligthly clunky and un-organised army, begins to decend down upon the inhabbitants of the world.<br>"
+			world << "<font color = yellow><b>The number of bandits in the area begins to steadily increase across the land. After a while, it becomes apparent to those who wander the country side that all is not well. Once in a while, the Bandit leaders decide to form up and attack the Human Kingdom and anyone else who got in their way, and this was one such gathering. The massive, but slightly clunky and un-organized army, begins to descend down upon the inhabitants of the world.<br>"
 			var/Bandits = rand(40,60)
 			var/mob/NPC/Evil/Misc/Human_Bandit/B = new
 			B.Type = "Leader"
@@ -842,7 +841,7 @@ client
 						var/mob/NPC/Evil/Misc/Human_Bandit/Ba = new
 						Ba.loc = B.loc
 		if(EventNum == 4)
-			world << "<font color = yellow><b>Goblin numbers start to rise frantically, signs of a large horde begin to show. After some time, a rag tag squabble forms and starts to roam the country side in search of shiney objects. The Goblins leave destruction in their wake and appear to be following a large Troll.<br>"
+			world << "<font color = yellow><b>Goblin numbers start to rise frantically, signs of a large horde begin to show. After some time, a rag tag squabble forms and starts to roam the country side in search of shiny objects. The Goblins leave destruction in their wake and appear to be following a large Troll.<br>"
 			var/Gobs = rand(40,60)
 			var/mob/NPC/Evil/Misc/Troll/Troll/T = new
 			T.Type = "Leader"
@@ -854,7 +853,7 @@ client
 						var/mob/NPC/Evil/Misc/Goblin/G = new
 						G.loc = T.loc
 		if(EventNum == 5)
-			world << "<font color = yellow><b>Like a torrent, hundreds of Kobold suddenly burst forth from a cave that leads to a vast underground network. After many years of inner fighting, this immense disgusting force of creatures had finally reached the limit on living space and had little choice to venture out. However, food was short and before long the horde was massing upon the country side in search of Nurishment.<br>"
+			world << "<font color = yellow><b>Like a torrent, hundreds of Kobold suddenly burst forth from a cave that leads to a vast underground network. After many years of inner fighting, this immense disgusting force of creatures had finally reached the limit on living space and had little choice to venture out. However, food was short and before long the horde was massing upon the country side in search of nourishment.<br>"
 			var/Bandits = rand(50,70)
 			var/mob/NPC/Evil/Misc/Kobold/KL = new
 			KL.Type = "Leader"
@@ -903,7 +902,7 @@ client
 			Season = "Winter"
 			world << "<font color = blue><font size = 4><b>It is now Winter<br>"
 			Populate()
-	DayNightCyle()
+	DayNightCycle()
 		var/Delay
 		if(Night == 0)
 			Night = 1
@@ -913,7 +912,7 @@ client
 				if(T.OnFire == 0)
 					T.luminosity = 0
 			spawn(Delay)
-				DayNightCyle()
+				DayNightCycle()
 			return
 		if(Night)
 			Night = 0
@@ -924,7 +923,7 @@ client
 					if(T.OnFire == 0)
 						T.luminosity = 1
 			spawn(Delay)
-				DayNightCyle()
+				DayNightCycle()
 			return
 	Time()
 		Month += 1

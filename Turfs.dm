@@ -404,8 +404,13 @@ turf
 				if(usr.Function == "Interact")
 					if(src in range(1,usr))
 						if(src.icon_state == "underwater floor" && usr.Fainted == 0)
+<<<<<<< Updated upstream
 							if(usr.CantDoTask == 0)
 								usr.CantDoTask = 1
+=======
+							if(usr.CannotDoTask == 0)
+								usr.CannotDoTask = 1
+>>>>>>> Stashed changes
 								var/Delay = rand(100,150)
 								if(usr.LeftLeg == 0)
 									Delay += 25
@@ -417,8 +422,13 @@ turf
 									Delay += 25
 								spawn(Delay)
 									if(usr)
+<<<<<<< Updated upstream
 										usr.CantDoTask = 0
 								view() << "<font color = yellow>[usr] begins to swims up!<br>"
+=======
+										usr.CannotDoTask = 0
+								view() << "<font color = yellow>[usr] begins to swim up!<br>"
+>>>>>>> Stashed changes
 								var/Sink = 0
 								Sink += usr.Weight / 5
 								Sink -= usr.Strength / 4

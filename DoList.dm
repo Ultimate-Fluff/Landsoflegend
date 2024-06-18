@@ -21,7 +21,7 @@
 
 //bug with turning into zombie 3 times in a row
 
-//bug with helmet dropping and staying on or somthing
+//bug with helmet dropping and staying on or something
 
 //somtimes overlays remian for combat and it seems you are geetting attacked and you loose blood
 
@@ -45,7 +45,7 @@
 
 //dupe bug, some items duplicate, mainly map spawned ones.
 
-//Already lits torchs may not light forges or somthing.
+//Already lits torchs may not light forges or something.
 
 //Some weights on things like Coal and Charcoal seemed bugged according to some people.
 
@@ -55,11 +55,11 @@
 
 //Cant use Pick to attack already dug up turf.
 
-//Undead died of a heart attack or somthing.
+//Undead died of a heart attack or something.
 
-//: My character is like, 35. But her age is 69. - Bug with aging or somthing, from logging in and out.
+//: My character is like, 35. But her age is 69. - Bug with aging or something, from logging in and out.
 
-//Undead may have problems with their Organs and health or somthing, and when they relog, it resets to normal or somthibg.
+//Undead may have problems with their Organs and health or something, and when they relog, it resets to normal or somthibg.
 
 //Make the player start choosing their char somwhere else besdies the human throne room.
 
@@ -182,7 +182,7 @@
 
 //Skeelies can be shot at all day with bows and not die.
 
-//Make somthing that clears up the deciamals on the end of all the stats,ect.
+//Make something that clears up the deciamals on the end of all the stats,ect.
 
 //make it so you can open the menus while fighting.
 
@@ -281,20 +281,24 @@
 
 //Maybe Fixed  -bugs with the luminostiy after making walls ect
 
-//Maybe Fixed - problem with people getting spammed a bleed msg or somthing
+//Maybe Fixed - problem with people getting spammed a bleed msg or something
 
 //Maybe Fixed - possible bug with having no bleeding and getting a bleed msg
 
 //Maybe Fixed - bug where possibly bows or melee keep attacking people from far away, or keep attacking the player with the item, no idea
 
 
-//No Idea - Items think their equipped when chars are loaded maybe or somthing
+//No Idea - Items think their equipped when chars are loaded maybe or something
 
+<<<<<<< Updated upstream
 //No Idea - bug with shield, cant equip it or somthing, need to check
+=======
+//No Idea - bug with shield,  equip it or something, need to check
+>>>>>>> Stashed changes
 
 //No Idea - Bleed msg does not seem to display in dark areas
 
-//No Idea - Treasure armour and maybe weapons dont show their stats or somthing
+//No Idea - Treasure armour and maybe weapons dont show their stats or something
 
 //END MAYBE FIXED BUG LIST
 
