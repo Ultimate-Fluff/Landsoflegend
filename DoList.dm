@@ -65,7 +65,7 @@
 
 //some items are still weightless, like the saw
 
-//Bug maybe with loosing both eyes, need to make it so you cant see anything, where as now, it lets you see everything, even when dark, apprantly.
+//Bug maybe with loosing both eyes, need to make it so you cannot see anything, where as now, it lets you see everything, even when dark, apprantly.
 
 //Can relog to avoid drowning
 
@@ -119,7 +119,7 @@
 
 //: I can't put doors on Gate squares?
 
-//Re-work branch equip code to work with dual wielding and make sure it cant be bugged up when throwing into a fire.
+//Re-work branch equip code to work with dual wielding and make sure it cannot be bugged up when throwing into a fire.
 
 //Possible icon bug with quivers. <--- Admin invis maybe.
 
@@ -162,7 +162,7 @@
 
 //Goblin smashes Unknown in the skull and knocks them out! <---As Illithid.
 
-//When a door breaks, Inquis one maybe, you cant move. Check for bugs if two players at the same time attack.
+//When a door breaks, Inquis one maybe, you cannot move. Check for bugs if two players at the same time attack.
 
 
 
@@ -204,7 +204,7 @@
 
 //add archer npcs who defend the towns
 
-//make sure npc dont target those behind walls
+//make sure npc do not target those behind walls
 
 //ability to crwal with an arm left after no legs
 
@@ -214,7 +214,7 @@
 
 //enhancee the stun system
 
-//make sure weapons dont ware down when hitting soft armours or skin
+//make sure weapons do not ware down when hitting soft armours or skin
 
 //bug with trees that are stumps with leaves
 
@@ -291,14 +291,14 @@
 //No Idea - Items think their equipped when chars are loaded maybe or something
 
 <<<<<<< Updated upstream
-//No Idea - bug with shield, cant equip it or somthing, need to check
+//No Idea - bug with shield, cannot equip it or somthing, need to check
 =======
 //No Idea - bug with shield,  equip it or something, need to check
 >>>>>>> Stashed changes
 
 //No Idea - Bleed msg does not seem to display in dark areas
 
-//No Idea - Treasure armour and maybe weapons dont show their stats or something
+//No Idea - Treasure armour and maybe weapons do not show their stats or something
 
 //END MAYBE FIXED BUG LIST
 

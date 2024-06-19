@@ -201,18 +201,18 @@ turf
 			Click()
 				if(usr.Function == "Combat")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 		Grass
@@ -221,18 +221,18 @@ turf
 				if(usr.Function == "Combat")
 					if(src.density)
 						if(usr.Fainted)
-							usr << "<font color =red>You have fainted and cant do that!<br>"
+							usr << "<font color =red>You have fainted and cannot do that!<br>"
 							return
 						if(usr.Stunned)
-							usr << "<font color =red>You are stunned and cant do that!<br>"
+							usr << "<font color =red>You are stunned and cannot do that!<br>"
 							return
 						usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 		GrassSnow
@@ -241,18 +241,18 @@ turf
 				if(usr.Function == "Combat")
 					if(src.density)
 						if(usr.Fainted)
-							usr << "<font color =red>You have fainted and cant do that!<br>"
+							usr << "<font color =red>You have fainted and cannot do that!<br>"
 							return
 						if(usr.Stunned)
-							usr << "<font color =red>You are stunned and cant do that!<br>"
+							usr << "<font color =red>You are stunned and cannot do that!<br>"
 							return
 						usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 		GrassSand
@@ -261,18 +261,18 @@ turf
 				if(usr.Function == "Combat")
 					if(src.density)
 						if(usr.Fainted)
-							usr << "<font color =red>You have fainted and cant do that!<br>"
+							usr << "<font color =red>You have fainted and cannot do that!<br>"
 							return
 						if(usr.Stunned)
-							usr << "<font color =red>You are stunned and cant do that!<br>"
+							usr << "<font color =red>You are stunned and cannot do that!<br>"
 							return
 						usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 		Snow
@@ -281,18 +281,18 @@ turf
 				if(usr.Function == "Combat")
 					if(src.density)
 						if(usr.Fainted)
-							usr << "<font color =red>You have fainted and cant do that!<br>"
+							usr << "<font color =red>You have fainted and cannot do that!<br>"
 							return
 						if(usr.Stunned)
-							usr << "<font color =red>You are stunned and cant do that!<br>"
+							usr << "<font color =red>You are stunned and cannot do that!<br>"
 							return
 						usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 		Sky
@@ -333,18 +333,18 @@ turf
 			Click()
 				if(usr.Function == "Combat")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 
@@ -353,18 +353,18 @@ turf
 			Click()
 				if(usr.Function == "Combat")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 		UnderWater
@@ -452,18 +452,18 @@ turf
 								return
 				if(usr.Function == "Combat")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 		Blood
@@ -492,18 +492,18 @@ turf
 					return
 				if(usr.Function == "Combat")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 		Water
@@ -565,18 +565,18 @@ turf
 							usr.loc = locate(src.x,src.y,3)
 				if(usr.Function == "Combat")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 		StoneRoad
@@ -584,18 +584,18 @@ turf
 			Click()
 				if(usr.Function == "Combat")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 		DirtRoad
@@ -604,18 +604,18 @@ turf
 			Click()
 				if(usr.Function == "Combat")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 		Sand
@@ -623,18 +623,18 @@ turf
 			Click()
 				if(usr.Function == "Combat")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 		WoodFloor
@@ -648,18 +648,18 @@ turf
 			Click()
 				if(usr.Function == "Combat")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 		RedCarpet
@@ -670,18 +670,18 @@ turf
 			Click()
 				if(usr.Function == "Combat")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 		LightStoneSlab
@@ -695,18 +695,18 @@ turf
 			Click()
 				if(usr.Function == "Combat")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 		StrangeCrystalSlab
@@ -719,18 +719,18 @@ turf
 			Click()
 				if(usr.Function == "Combat")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 		StoneSlab
@@ -743,18 +743,18 @@ turf
 			Click()
 				if(usr.Function == "Combat")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 		SandStoneSlab
@@ -766,18 +766,18 @@ turf
 			Click()
 				if(usr.Function == "Combat")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 	Walls
@@ -795,18 +795,18 @@ turf
 			Click()
 				if(usr.Function == "Combat")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 		SolidStone
@@ -820,18 +820,18 @@ turf
 			Click()
 				if(usr.Function == "Combat")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 
@@ -844,18 +844,18 @@ turf
 			Click()
 				if(usr.Function == "Combat")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 		WoodenWall
@@ -868,18 +868,18 @@ turf
 			Click()
 				if(usr.Function == "Combat")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 		BulkyBrickWall
@@ -891,18 +891,18 @@ turf
 			Click()
 				if(usr.Function == "Combat")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 		StrangeCrystalWall
@@ -914,18 +914,18 @@ turf
 			Click()
 				if(usr.Function == "Combat")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 		BulkyBrickWindow
@@ -940,18 +940,18 @@ turf
 			Click()
 				if(usr.Function == "Combat")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 		ReallyBulkyLightBrickWall
@@ -963,18 +963,18 @@ turf
 			Click()
 				if(usr.Function == "Combat")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 		ReallyBulkySandStoneWall
@@ -986,17 +986,17 @@ turf
 			Click()
 				if(usr.Function == "Combat")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)
 				if(usr.Function == "Interact")
 					if(usr.Fainted)
-						usr << "<font color =red>You have fainted and cant do that!<br>"
+						usr << "<font color =red>You have fainted and cannot do that!<br>"
 						return
 					if(usr.Stunned)
-						usr << "<font color =red>You are stunned and cant do that!<br>"
+						usr << "<font color =red>You are stunned and cannot do that!<br>"
 						return
 					usr.WallDigAttack(src)

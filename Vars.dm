@@ -38,7 +38,7 @@ mob
 		CanTakeDamage = 1 //For magic shields, ect.
 		CanUseTK = 0 //Races that can use TK powers.
 
-		OrginalName = null
+		OriginalName = null
 
 		MouseLocationX = null
 		MouseLocationY = null
@@ -97,7 +97,7 @@ mob
 
 		CarpentrySkill = 1
 		MiningSkill = 1
-		MasonarySkill = 1
+		MasonrySkill = 1
 		SmeltingSkill = 1
 		ForgingSkill = 1
 		WoodCuttingSkill = 1
@@ -117,7 +117,7 @@ mob
 
 		CarpentrySkillMulti = 0
 		MiningSkillMulti = 0
-		MasonarySkillMulti = 0
+		MasonrySkillMulti = 0
 		SmeltingSkillMulti = 0
 		ForgingSkillMulti = 0
 		WoodCuttingSkillMulti = 0
@@ -147,7 +147,7 @@ mob
 		WindMagic = 0
 		EarthMagic = 0
 		MagicResistance = 10 // Default for now.
-		MagicPotentcy = 0
+		MagicPotency = 0
 		DiseaseResistance = 10 // Default for now
 		CanUseMagic = 1
 
@@ -232,7 +232,7 @@ mob
 
 		LangKnow = list()
 
-		Preg = 0 // 1 means an NPC birth, 2 for a Player, and 3 means they cant Mate for another year.
+		Preg = 0 // 1 means an NPC birth, 2 for a Player, and 3 means they cannot Mate for another year.
 		PregType = null //How the person Breeds, Womb, Egg, Infection, ect.
 		PregTimer = 0 //How long until they can have another baby.
 		FatherStrength = 0

@@ -222,7 +222,7 @@ mob
 							if(src.Strength <= usr.Strength / 1.2)
 								StrMsg = "<font color = blue><br>[src] looks a little weaker than you.<br>"
 							if(src.Strength <= usr.Strength / 1.5)
-								StrMsg = "<font color = blue><br>[src] looks alot weaker than you.<br>"
+								StrMsg = "<font color = blue><br>[src] looks a lot weaker than you.<br>"
 							if(src.Strength <= usr.Strength / 2)
 								StrMsg = "<font color = blue><br>[src] looks terribly weaker than you.<br>"
 							if(src.Strength <= usr.Strength / 3)
@@ -232,7 +232,7 @@ mob
 							if(usr.Strength <= src.Strength / 1.2)
 								StrMsg = "<font color = blue><br>[src] looks a little bit stronger than you.<br>"
 							if(usr.Strength <= src.Strength / 1.5)
-								StrMsg = "<font color = blue><br>[src] looks a alot stronger than you.<br>"
+								StrMsg = "<font color = blue><br>[src] looks a lot stronger than you.<br>"
 							if(usr.Strength <= src.Strength / 2)
 								StrMsg = "<font color = blue><br>[src] looks immensely stronger than you.<br>"
 							if(usr.Strength <= src.Strength / 3)
@@ -249,7 +249,7 @@ mob
 							if(src.Endurance <= usr.Endurance / 1.2)
 								EndMsg = "<font color = blue><br>[src] looks a little less endurant than you.<br>"
 							if(src.Endurance <= usr.Endurance / 1.5)
-								EndMsg = "<font color = blue><br>[src] looks alot less endurant than you.<br>"
+								EndMsg = "<font color = blue><br>[src] looks a lot less endurant than you.<br>"
 							if(src.Endurance <= usr.Endurance / 2)
 								EndMsg = "<font color = blue><br>[src] looks terribly less endurant than you.<br>"
 							if(src.Endurance <= usr.Endurance / 3)
@@ -259,7 +259,7 @@ mob
 							if(usr.Endurance <= src.Endurance / 1.2)
 								EndMsg = "<font color = blue><br>[src] looks a little bit more endurant than you.<br>"
 							if(usr.Endurance <= src.Endurance / 1.5)
-								EndMsg = "<font color = blue><br>[src] looks a alot more endurant than you.<br>"
+								EndMsg = "<font color = blue><br>[src] looks a lot more endurant than you.<br>"
 							if(usr.Endurance <= src.Endurance / 2)
 								EndMsg = "<font color = blue><br>[src] looks immensely more endurant than you.<br>"
 							if(usr.Endurance <= src.Endurance / 3)
@@ -276,7 +276,7 @@ mob
 							if(src.Agility <= usr.Agility / 1.2)
 								AgilMsg = "<font color = blue><br>[src] looks a little less agile than you.<br>"
 							if(src.Agility <= usr.Agility / 1.5)
-								AgilMsg = "<font color = blue><br>[src] looks alot less agile than you.<br>"
+								AgilMsg = "<font color = blue><br>[src] looks a lot less agile than you.<br>"
 							if(src.Agility <= usr.Agility / 2)
 								AgilMsg = "<font color = blue><br>[src] looks terribly less agile than you.<br>"
 							if(src.Agility <= usr.Agility / 3)
@@ -286,7 +286,7 @@ mob
 							if(usr.Agility <= src.Agility / 1.2)
 								AgilMsg = "<font color = blue><br>[src] looks a little bit more agile than you.<br>"
 							if(usr.Agility <= src.Agility / 1.5)
-								AgilMsg = "<font color = blue><br>[src] looks a alot more agile than you.<br>"
+								AgilMsg = "<font color = blue><br>[src] looks a lot more agile than you.<br>"
 							if(usr.Agility <= src.Agility / 2)
 								AgilMsg = "<font color = blue><br>[src] looks immensely more agile than you.<br>"
 							if(usr.Agility <= src.Agility / 3)
@@ -303,7 +303,7 @@ mob
 							if(src.Intelligence <= usr.Intelligence / 1.2)
 								IntMsg = "<font color = blue><br>[src] looks a little less intelligent than you.<br>"
 							if(src.Intelligence <= usr.Intelligence / 1.5)
-								IntMsg = "<font color = blue><br>[src] looks alot less intelligent than you.<br>"
+								IntMsg = "<font color = blue><br>[src] looks a lot less intelligent than you.<br>"
 							if(src.Intelligence <= usr.Intelligence / 2)
 								IntMsg = "<font color = blue><br>[src] looks terribly less intelligent than you.<br>"
 							if(src.Intelligence <= usr.Intelligence / 3)
@@ -313,7 +313,7 @@ mob
 							if(usr.Intelligence <= src.Intelligence / 1.2)
 								IntMsg = "<font color = blue><br>[src] looks a little bit more intelligent than you.<br>"
 							if(usr.Intelligence <= src.Intelligence / 1.5)
-								IntMsg = "<font color = blue><br>[src] looks a alot more intelligent than you.<br>"
+								IntMsg = "<font color = blue><br>[src] looks a lot more intelligent than you.<br>"
 							if(usr.Intelligence <= src.Intelligence / 2)
 								IntMsg = "<font color = blue><br>[src] looks immensely more intelligent than you.<br>"
 							if(usr.Intelligence <= src.Intelligence / 3)
@@ -354,9 +354,9 @@ mob
 								if(usr.name != "Unknown")
 									M.HateList += usr.name
 				if(src.client && Display)
-					view(usr) << "<font color = yellow> ([usr.OrginalName])[usr] readies for combat while facing in [src]'s direction!<br>"
+					view(usr) << "<font color = yellow> ([usr.OriginalName])[usr] readies for combat while facing in [src]'s direction!<br>"
 				if(src.client)
-					usr.Log_player("([usr.key])[usr] - [usr.OrginalName] Targets [src] to Attack.")
+					usr.Log_player("([usr.key])[usr] - [usr.OriginalName] Targets [src] to Attack.")
 				usr.client.images += src.TargetIcon
 			if(usr.Function == "Pull")
 				if(src.Fainted)
@@ -435,21 +435,21 @@ mob
 								usr.Target = null
 							return
 						else
-							usr << "<font color = red>You dont have enough coins to pay off your fine!<br>"
+							usr << "<font color = red>You do not have enough coins to pay off your fine!<br>"
 							return
 		if(usr.Function == "Interact" && usr.Ref == null && src.client)
 			if(src != usr)
 				if(usr in range(1,src))
 					if(src.Age <= 10 && usr.Age <= 10)
-						range(8,usr) << "<font color = yellow>([usr.OrginalName])[usr] Asks [src], a [src.Age] year old [src.Gender], to Mate. But they are both far too young!<br>"
+						range(8,usr) << "<font color = yellow>([usr.OriginalName])[usr] Asks [src], a [src.Age] year old [src.Gender], to Mate. But they are both far too young!<br>"
 						usr << "<font color = teal>[src] and you, must be at least 11 to Mate!<br>"
 						return
 					if(src.Age <= 10)
-						range(8,usr) << "<font color = yellow>([usr.OrginalName])[usr] Asks [src], a [src.Age] year old [src.Gender], to Mate. But [src] is far too young!<br>"
+						range(8,usr) << "<font color = yellow>([usr.OriginalName])[usr] Asks [src], a [src.Age] year old [src.Gender], to Mate. But [src] is far too young!<br>"
 						usr << "<font color = teal>[src] must be at least 11 to Mate!<br>"
 						return
 					if(usr.Age <= 10)
-						range(8,usr) << "<font color = yellow>([usr.OrginalName])[usr] Asks [src], a [src.Age] year old [src.Gender], to Mate. But [src] is far too young!<br>"
+						range(8,usr) << "<font color = yellow>([usr.OriginalName])[usr] Asks [src], a [src.Age] year old [src.Gender], to Mate. But [src] is far too young!<br>"
 						usr << "<font color = teal>[src] must be at least 11 to Mate!<br>"
 						return
 					var/Mate = 0
@@ -461,7 +461,7 @@ mob
 						var/list/menu = new()
 						menu += "Yes"
 						menu += "No"
-						var/Result = input(src,"([usr.OrginalName])[usr] has offered to Mate with you, do you accept?", "Choose", null) in menu
+						var/Result = input(src,"([usr.OriginalName])[usr] has offered to Mate with you, do you accept?", "Choose", null) in menu
 						if(Result == "Yes")
 							range(8,usr) << "<font color = yellow>[src] accepts [usr] in their offer to Mate, and....off they go.<br>"
 							if(usr.Gender == "Female" && usr.Preg == 0)
@@ -660,9 +660,9 @@ mob
 									src.Speak("Ah, I see you've chosen a [I], a fine choice indeed! That item has a total Value of about [RoundedVal] Gold Coins.",7)
 									var/list/menu = new()
 									menu += "Buy"
-									menu += "Dont Buy"
+									menu += "DoNot Buy"
 									var/Result = input(usr,"[src] says - Would you like to purchase the [I] for [RoundedVal] Gold Coins?", "Choose", null) in menu
-									if(Result == "Dont Buy")
+									if(Result == "DoNot Buy")
 										return
 									if(Result == "Buy")
 										for(var/obj/Items/Currency/GoldCoin/Gold in usr)
@@ -700,7 +700,7 @@ mob
 													I.CanBeCrafted = 1
 												src.Speak("Thank you, come again!.",7)
 											else
-												src.Speak("You dont have [RoundedVal] Gold Coins so you cant buy the [I].",7)
+												src.Speak("You do not have [RoundedVal] Gold Coins so you cannot buy the [I].",7)
 						else
 							usr << "<font color = yellow>[src] seems to have no idea what your saying.<br>"
 						return
@@ -1739,9 +1739,9 @@ mob
 									src.Speak("Ah, I see you've chosen a [I], a fine choice indeed! That item has a total Value of about [RoundedVal] Gold Coins.",7)
 									var/list/menu = new()
 									menu += "Buy"
-									menu += "Dont Buy"
+									menu += "DoNot Buy"
 									var/Result = input(usr,"[src] says - Would you like to purchase the [I] for [RoundedVal] Gold Coins?", "Choose", null) in menu
-									if(Result == "Dont Buy")
+									if(Result == "DoNot Buy")
 										return
 									if(Result == "Buy")
 										for(var/obj/Items/Currency/GoldCoin/Gold in usr)
@@ -1779,7 +1779,7 @@ mob
 													I.CanBeCrafted = 1
 												src.Speak("Thank you, come again!.",7)
 											else
-												src.Speak("You dont have [RoundedVal] Gold Coins so you cant buy the [I].",7)
+												src.Speak("You do not have [RoundedVal] Gold Coins so you cannot buy the [I].",7)
 						else
 							usr << "<font color = yellow>[src] seems to have no idea what your saying.<br>"
 						return
@@ -2979,9 +2979,9 @@ mob
 									src.Speak("Ah, I see you've chosen a [I], a fine choice my friend! That item has a total Value of about [RoundedVal] Gold Coins.",7)
 									var/list/menu = new()
 									menu += "Buy"
-									menu += "Dont Buy"
+									menu += "DoNot Buy"
 									var/Result = input(usr,"[src] says - Would you like to purchase the [I] for [RoundedVal] Gold Coins?", "Choose", null) in menu
-									if(Result == "Dont Buy")
+									if(Result == "DoNot Buy")
 										return
 									if(Result == "Buy")
 										for(var/obj/Items/Currency/GoldCoin/Gold in usr)
@@ -3019,7 +3019,7 @@ mob
 													I.CanBeCrafted = 1
 												src.Speak("Remember, best wares in all the land!.",7)
 											else
-												src.Speak("You dont have [RoundedVal] Gold Coins so you cant buy the [I], what ya trying to do, rip me off?! Shame on you...",7)
+												src.Speak("You do not have [RoundedVal] Gold Coins so you cannot buy the [I], what ya trying to do, rip me off?! Shame on you...",7)
 						else
 							usr << "<font color = yellow>[src] glares, seeming to have no idea what your saying.<br>"
 						return
@@ -3462,7 +3462,7 @@ mob
 							Gold.Type = rand(10,25)
 							Gold.name = "[Gold.Type] Gold Coins"
 							Gold.CoinAdjust()
-			Human_Inquisitor_Patroler
+			Human_Inquisitor_Patroller
 				name = "Human Inquisitor"
 				icon = 'human.dmi'
 				icon_state = "N"
@@ -3626,14 +3626,14 @@ mob
 					Gold.CoinAdjust()
 					spawn(10)
 						var/Found = 0
-						for(var/mob/NPC/Good/Human_Priest_Patroler/P in view(4,src))
+						for(var/mob/NPC/Good/Human_Priest_Patroller/P in view(4,src))
 							Found = 1
 							src.Owner = P
 						if(Found)
 							src.FollowAI()
 						else
 							src.InquisitiveAI()
-			Human_Priest_Patroler
+			Human_Priest_Patroller
 				name = "Human Priest of Order"
 				icon = 'human.dmi'
 				icon_state = "N"
@@ -4422,7 +4422,7 @@ mob
 						src.CurrentLanguage = L
 			Undead
 				see_in_dark = 6
-				Corpse_Devourer_Cacoon
+				Corpse_Devourer_Cocoon
 					icon = 'misc.dmi'
 					icon_state = "devourer cacoon"
 
@@ -4469,7 +4469,7 @@ mob
 						src.DeadIcon = 'misc.dmi'
 						src.DeadState = "devourer cacoon dead"
 						src.BloodFlow()
-						src.DevourerCacoonHatch()
+						src.DevourerCocoonHatch()
 				Corpse_Devourer
 					name = "{NPC} Corpse Devourer"
 					icon = 'creatures.dmi'
@@ -7420,9 +7420,9 @@ mob
 										src.Speak("You choose [I], good good! Give [RoundedVal] shinies!.",7)
 										var/list/menu = new()
 										menu += "Buy"
-										menu += "Dont Buy"
+										menu += "DoNot Buy"
 										var/Result = input(usr,"[src] says - Buy [I] for [RoundedVal] shinies?", "Choose", null) in menu
-										if(Result == "Dont Buy")
+										if(Result == "DoNot Buy")
 											return
 										if(Result == "Buy")
 											for(var/obj/Items/Currency/GoldCoin/Gold in usr)
@@ -7458,7 +7458,7 @@ mob
 														I.CanBeCrafted = 1
 													if(I.ObjectTag == "Armour")
 														I.CanBeCrafted = 1
-													src.Speak("Come, come again! Bring more shiney!.",7)
+													src.Speak("Come, come again! Bring more shinies!!.",7)
 												else
 													src.Speak("No have [RoundedVal] shinies so you no buy the [I].",7)
 							else
@@ -8482,9 +8482,9 @@ mob
 									src.Speak("Ah, I see you've chosen a [I], a fine choice indeed! That item has a total Value of about [RoundedVal] Gold Coins.",7)
 									var/list/menu = new()
 									menu += "Buy"
-									menu += "Dont Buy"
+									menu += "DoNot Buy"
 									var/Result = input(usr,"[src] says - Would you like to purchase the [I] for [RoundedVal] Gold Coins?", "Choose", null) in menu
-									if(Result == "Dont Buy")
+									if(Result == "DoNot Buy")
 										return
 									if(Result == "Buy")
 										for(var/obj/Items/Currency/GoldCoin/Gold in usr)
@@ -8522,7 +8522,7 @@ mob
 													I.CanBeCrafted = 1
 												src.Speak("Thank you, come again!.",7)
 											else
-												src.Speak("You dont have [RoundedVal] Gold Coins so you cant buy the [I].",7)
+												src.Speak("You do not have [RoundedVal] Gold Coins so you cannot buy the [I].",7)
 						else
 							usr << "<font color = yellow>[src] seems to have no idea what your saying.<br>"
 						return

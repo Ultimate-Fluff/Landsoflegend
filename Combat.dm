@@ -66,11 +66,8 @@ mob
 					T.Move(src)
 				for(var/atom/a in range(0,src))
 					if(a.density && a != src)
-<<<<<<< Updated upstream
 						view(src) << "<font color = red>[src] slams into [a]!<br>"
-=======
 						view(src) << "<font color = red>[src] slams into The [a]!<br>"
->>>>>>> Stashed changes
 						src.Pain += rand(15,25)
 						if(src.Weapon)
 							var/Drop = prob(100 - src.Agility * 1.5)
@@ -632,7 +629,7 @@ mob
 										src.Bleed()
 									if(src.Brain <= 20 && src.Brain != 0)
 										src.Brain = 0
-										view(src) << "<font color = purple>[src]'s skull has been cracked open by an arrow, their brain becomes horrificly damaged and they die instantly!<br>"
+										view(src) << "<font color = purple>[src]'s skull has been cracked open by an arrow, their brain becomes horrifically damaged and they die instantly!<br>"
 										src.Death()
 										return
 						if(HThroat)
@@ -653,7 +650,7 @@ mob
 								if(src.Throat <= 1 && src.Throat != 0)
 									src.Throat = 0
 									if(src.Faction != "Undead")
-										view(src) << "<font color = purple>An arrow flies into [src]'s Throat, blood begins to gush from the wound as they slowy fall to the floor dieng almost instantly!<br>"
+										view(src) << "<font color = purple>An arrow flies into [src]'s Throat, blood begins to gush from the wound as they slowly fall to the floor dying almost instantly!<br>"
 										src.Death()
 										return
 						if(HSkull)
@@ -684,7 +681,7 @@ mob
 									src.Brain -= 50
 									if(src.Brain <= 20)
 										src.Brain = 0
-										view(src) << "<font color = purple>[src]'s skull has been cracked open by an arrow, their brain becomes horrificly damaged and they die instantly!<br>"
+										view(src) << "<font color = purple>[src]'s skull has been cracked open by an arrow, their brain becomes horrifically damaged and they die instantly!<br>"
 										src.Death()
 										return
 						if(HNose)
@@ -1198,15 +1195,9 @@ mob
 							view(src) << "<font color =red>[src] is bleeding [src.Bleed]!<br>"
 							src.BleedLast = src.Bleed
 				if(Die)
-<<<<<<< Updated upstream
-					view(src) << "<font color=red>[src] has bled to death!<br>"
-					if(src.BloodColour == /obj/Misc/Gore/BloodSplat/)
-						var/obj/BS = new src.BloodColour()
-=======
 					view(src) << "<font color=red>[src] dies from exsanguination.<br>"
 					if(src.BloodColor == /obj/Misc/Gore/BloodSplat/)
 						var/obj/BS = new src.BloodColor()
->>>>>>> Stashed changes
 						BS.Move(src.loc)
 						BS.icon_state = "floor puddle"
 					src.Death()
@@ -1266,9 +1257,9 @@ mob
 						I.overlays-=image(/obj/HUD/E/)
 						I.icon_state = I.CarryState
 						src << "<font color =red>Your [I] has been damaged badly!<br>"
-						if(src.OrginalName)
-							src.name = src.OrginalName
-							src.OrginalName = null
+						if(src.OriginalName)
+							src.name = src.OriginalName
+							src.OriginalName = null
 						if(src.StoredFaction)
 							src.Faction = src.StoredFaction
 							src.StoredFaction = null
@@ -1713,7 +1704,7 @@ mob
 			if(T.client)
 				if(src.client)
 					if(T.client.address == src.client.address && T != src)
-						world << "<font color = teal><b>([usr.key])[usr] - [usr.OrginalName] was booted for Alt Key Interaction!<br>"
+						world << "<font color = teal><b>([usr.key])[usr] - [usr.OriginalName] was booted for Alt Key Interaction!<br>"
 						del(src)
 						return
 			if(T.Sleeping)
@@ -3149,7 +3140,7 @@ mob
 															if(A2.Delete)
 																del(A2)
 													if(T.Race == "Skeleton")
-														view(src) << "<font color =red>[T]'s Right Leg is Completely pulverised, their bones fall apart and smash to the ground!<br>"
+														view(src) << "<font color =red>[T]'s Right Leg is Completely pulverized, their bones fall apart and smash to the ground!<br>"
 														T.Death()
 														return
 												else
@@ -3193,7 +3184,7 @@ mob
 														del(A2)
 												T.WRightFoot = null
 											if(T.Race == "Skeleton")
-												view(src) << "<font color =red>[T]'s Right Leg is Completely pulverised, their bones fall apart and smash to the ground!<br>"
+												view(src) << "<font color =red>[T]'s Right Leg is Completely pulverized, their bones fall apart and smash to the ground!<br>"
 												T.Death()
 												return
 										else
@@ -3439,7 +3430,7 @@ mob
 															if(A2.Delete)
 																del(A2)
 													if(T.Race == "Skeleton")
-														view(src) << "<font color =red>[T]'s Left Leg is Completely pulverised, their bones fall apart and smash to the ground!<br>"
+														view(src) << "<font color =red>[T]'s Left Leg is Completely pulverized, their bones fall apart and smash to the ground!<br>"
 														T.Death()
 														return
 												else
@@ -3483,7 +3474,7 @@ mob
 													if(A2.Delete)
 														del(A2)
 											if(T.Race == "Skeleton")
-												view(src) << "<font color =red>[T]'s Left Leg is Completely pulverised, their bones fall apart and smash to the ground!<br>"
+												view(src) << "<font color =red>[T]'s Left Leg is Completely pulverized, their bones fall apart and smash to the ground!<br>"
 												T.Death()
 												return
 										else
@@ -3691,7 +3682,7 @@ mob
 										view(src) << "<font color =red>[src] shatters [T]'s Left Arm, they drop their [O]!<br>"
 										view(5) << 'BreakBone.wav'
 										if(T.Race == "Skeleton")
-											view(src) << "<font color =red>[T]'s Left Arm is Completely pulverised, their bones fall apart and smash to the ground!<br>"
+											view(src) << "<font color =red>[T]'s Left Arm is Completely pulverized, their bones fall apart and smash to the ground!<br>"
 											T.Death()
 											return
 								if(T.LeftArm <= 1 && T.LeftArm != 0)
@@ -3734,7 +3725,7 @@ mob
 														if(A.Delete)
 															del(A)
 													if(T.Race == "Skeleton")
-														view(src) << "<font color =red>[T]'s Left Arm is Completely pulverised, their bones fall apart and smash to the ground!<br>"
+														view(src) << "<font color =red>[T]'s Left Arm is Completely pulverized, their bones fall apart and smash to the ground!<br>"
 														T.Death()
 														return
 												else
@@ -3764,7 +3755,7 @@ mob
 											L.Move(T.loc)
 											step_rand(L)
 											if(T.Race == "Skeleton")
-												view(src) << "<font color =red>[T]'s Left Arm is Completely pulverised, their bones fall apart and smash to the ground!<br>"
+												view(src) << "<font color =red>[T]'s Left Arm is Completely pulverized, their bones fall apart and smash to the ground!<br>"
 												T.Death()
 												return
 										else
@@ -3971,7 +3962,7 @@ mob
 										view(src) << "<font color =red>[src] shatters [T]'s Right Arm, they drop their weapon!<br>"
 										view(5) << 'BreakBone.wav'
 										if(T.Race == "Skeleton")
-											view(src) << "<font color =red>[T]'s Right Arm is Completely pulverised, their bones fall apart and smash to the ground!<br>"
+											view(src) << "<font color =red>[T]'s Right Arm is Completely pulverized, their bones fall apart and smash to the ground!<br>"
 											T.Death()
 											return
 								if(T.RightArm <= 1 && T.RightArm != 0)
@@ -4008,7 +3999,7 @@ mob
 														if(A.Delete)
 															del(A)
 													if(T.Race == "Skeleton")
-														view(src) << "<font color =red>[T]'s Right Arm is Completely pulverised, their bones fall apart and smash to the ground!<br>"
+														view(src) << "<font color =red>[T]'s Right Arm is Completely pulverized, their bones fall apart and smash to the ground!<br>"
 														T.Death()
 														return
 												else
@@ -4032,7 +4023,7 @@ mob
 											T.Bleed()
 											view(src) << "<font color =red>[src] hacks [T]'s Right Arm off!<br>"
 											if(T.Race == "Skeleton")
-												view(src) << "<font color =red>[T]'s Right Arm is Completely pulverised, their bones fall apart and smash to the ground!<br>"
+												view(src) << "<font color =red>[T]'s Right Arm is Completely pulverized, their bones fall apart and smash to the ground!<br>"
 												T.Death()
 												return
 										else
@@ -4365,7 +4356,7 @@ mob
 		Illness(var/SeverityFactor)
 			spawn(rand(200,1000))
 				if(src && src.Dead == 0)
-					src << "<font color = purple>You start to feel a little fevorish...<br>"
+					src << "<font color = purple>You start to feel a little feverish...<br>"
 					spawn(rand(500,1500))
 						if(src && src.Dead == 0)
 							var/WontRecover = prob(SeverityFactor)
@@ -4399,7 +4390,7 @@ mob
 			spawn(rand(200,1000))
 				if(src)
 					if(src.Dead== 0)
-						src << "<font color = purple>You start to feel a little fevorish...<br>"
+						src << "<font color = purple>You start to feel a little feverish...<br>"
 						spawn(rand(200,1000))
 						if(src)
 							if(src.Dead == 0)
@@ -4420,9 +4411,9 @@ mob
 													I.icon_state = I.CarryState
 													I.layer = 20
 													src.DeleteInventoryMenu()
-													if(src.OrginalName)
-														src.name = src.OrginalName
-														src.OrginalName = null
+													if(src.OriginalName)
+														src.name = src.OriginalName
+														src.OriginalName = null
 													if(src.StoredFaction)
 														src.Faction = src.StoredFaction
 														src.StoredFaction = null
@@ -4445,7 +4436,7 @@ mob
 											src.UndeadReset()
 											src.HateList = list("Stahlite Empire","Frogmen Hordes","Giant Hordes","Altherian Empire","Dragons","Demonic Legions","Human Empire","Chaos","Dangerous Beasts","Cyclops Hordes","Goblin Hordes","Spider Hordes","Snakeman Empire","Neutral","Human Empire Unholy","Human Empire Outlaw","None","Ratling Hordes")
 											src.Afflictions -= "Undead Bite"
-											src.Afflictions += "Undeath"
+											src.Afflictions += "Undead"
 											src.SpreadsAffliction = "Undead Bite"
 											src.DieAge = 1000
 											src.UndeadProc()

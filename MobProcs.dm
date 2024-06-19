@@ -15,9 +15,9 @@ mob
 					I.icon_state = I.CarryState
 				if(I.Delete)
 					del(I)
-			if(src.OrginalName)
-				src.name = src.OrginalName
-				src.OrginalName = null
+			if(src.OriginalName)
+				src.name = src.OriginalName
+				src.OriginalName = null
 			if(src.StoredFaction)
 				src.Faction = src.StoredFaction
 				src.StoredFaction = null
@@ -951,9 +951,9 @@ mob
 								O.icon_state = O.CarryState
 								O.layer = 20
 								Suspect.DeleteInventoryMenu()
-								if(Suspect.OrginalName)
-									Suspect.name = Suspect.OrginalName
-									Suspect.OrginalName = null
+								if(Suspect.OriginalName)
+									Suspect.name = Suspect.OriginalName
+									Suspect.OriginalName = null
 								if(Suspect.StoredFaction)
 									Suspect.Faction = Suspect.StoredFaction
 									Suspect.StoredFaction = null
@@ -1028,9 +1028,9 @@ mob
 								O.icon_state = O.CarryState
 								O.layer = 20
 								Suspect.DeleteInventoryMenu()
-								if(Suspect.OrginalName)
-									Suspect.name = Suspect.OrginalName
-									Suspect.OrginalName = null
+								if(Suspect.OriginalName)
+									Suspect.name = Suspect.OriginalName
+									Suspect.OriginalName = null
 								if(Suspect.StoredFaction)
 									Suspect.Faction = Suspect.StoredFaction
 									Suspect.StoredFaction = null
@@ -1154,10 +1154,10 @@ mob
 					if(Change == 0)
 						NewText+="[copytext(T,(length(T)-TextLength)+1,(length(T)-TextLength)+2)]"
 					TextLength--
-				if(src.OrginalName == null)
+				if(src.OriginalName == null)
 					M << "<font color=teal>[src] says in [SL.name]: [NewText]<br>"
 				else
-					M << "<font color=teal>([src.OrginalName])[src] says in [SL.name]: [NewText]<br>"
+					M << "<font color=teal>([src.OriginalName])[src] says in [SL.name]: [NewText]<br>"
 				if(Target)
 					Target << "<font color=teal>[src] says in [SL.name]: [NewText]<br>"
 		RaceRules()
@@ -1201,8 +1201,8 @@ mob
 				src << "<font color = blue>Cyclops have heard of, but do not know how to use, Elemental Magic, Nature Magic, Blood Magic, Chaos Magic, and Necromancy<br>"
 				src << "<font color = blue>Cyclops know the location of all their caves.<br>"
 <<<<<<< Updated upstream
-				src << "<font color = blue>Cyclops get angry at anything they do not understand, which is most things. They have a short temper and hate anything beautiful. They get pychotic if hurt or hungry, which means they hate everyone they meet, even other Cyclops.<br>"
-				src << "<font color = blue>Cyclops dont understand the concept of death, and thus do not fear it.<br>"
+				src << "<font color = blue>Cyclops get angry at anything they do not understand, which is most things. They have a short temper and hate anything beautiful. They get psychotic if hurt or hungry, which means they hate everyone they meet, even other Cyclops.<br>"
+				src << "<font color = blue>Cyclops do not understand the concept of death, and thus do not fear it.<br>"
 =======
 				src << "<font color = blue>Cyclops get angry at anything they do not understand, which is most things. They have a short temper and hate anything beautiful. They get psychotic if hurt or hungry, which means they hate everyone they meet, even other Cyclops.<br>"
 				src << "<font color = blue>Cyclops do not understand the concept of death, and thus do not fear it.<br>"
@@ -1311,7 +1311,7 @@ mob
 				src.HungerMulti = 1
 				src.CanUseTK = 1
 				src.DieAge = rand(200,500)
-				src.MagicPotentcy = rand(50,150)
+				src.MagicPotency = rand(50,150)
 				src.loc = locate(286,173,3)
 				src.icon = 'illithid.dmi'
 				src.icon_state = "N"
@@ -1356,7 +1356,7 @@ mob
 
 				src.CarpentrySkillMulti = 0.6
 				src.MiningSkillMulti = 0.2
-				src.MasonarySkillMulti = 0.6
+				src.MasonrySkillMulti = 0.6
 				src.SmeltingSkillMulti = 0.6
 				src.ForgingSkillMulti = 0.6
 				src.WoodCuttingSkillMulti = 0.6
@@ -1410,7 +1410,7 @@ mob
 				src.PregType = "Womb"
 				src.HungerMulti = 1
 				src.DieAge = rand(150,200)
-				src.MagicPotentcy = rand(20,101)
+				src.MagicPotency = rand(20,101)
 				src.loc = locate(237,82,1)
 				src.icon_state = "N"
 				src.WeightMax = 90
@@ -1431,7 +1431,7 @@ mob
 				for(var/mob/M in Players)
 					if(M.Race == src.Race && M.Gender == "Female" && M.Preg == 2)
 						if(src.client.address == M.client.address && M != src)
-							world << "<font color = teal><b>([src.key])[src] - [src.OrginalName] was booted for Alt Key Interaction involving character creation!<br>"
+							world << "<font color = teal><b>([src.key])[src] - [src.OriginalName] was booted for Alt Key Interaction involving character creation!<br>"
 							del(src)
 							return
 						PlayerBorn = 1
@@ -1478,7 +1478,7 @@ mob
 
 				src.CarpentrySkillMulti = 0.4
 				src.MiningSkillMulti = 0.2
-				src.MasonarySkillMulti = 0.8
+				src.MasonrySkillMulti = 0.8
 				src.SmeltingSkillMulti = 0.8
 				src.ForgingSkillMulti = 0.8
 				src.WoodCuttingSkillMulti = 0.2
@@ -1596,7 +1596,7 @@ mob
 				for(var/mob/M in Players)
 					if(M.Race == src.Race && M.Gender == "Female" && M.Preg == 2)
 						if(src.client.address == M.client.address && M != src)
-							world << "<font color = teal><b>([src.key])[src] - [src.OrginalName] was booted for Alt Key Interaction involving character creation!<br>"
+							world << "<font color = teal><b>([src.key])[src] - [src.OriginalName] was booted for Alt Key Interaction involving character creation!<br>"
 							del(src)
 							return
 						PlayerBorn = 1
@@ -1675,7 +1675,7 @@ mob
 					src.Weapon = A
 				src.CarpentrySkillMulti = 0.4
 				src.MiningSkillMulti = 0.4
-				src.MasonarySkillMulti = 0.8
+				src.MasonrySkillMulti = 0.8
 				src.SmeltingSkillMulti = 0.8
 				src.ForgingSkillMulti = 0.8
 				src.WoodCuttingSkillMulti = 0.4
@@ -1705,7 +1705,7 @@ mob
 				src.WeightMax = 115
 				src.Strength += 11
 				src.DieAge = rand(80,110)
-				src.MagicPotentcy = rand(0,25)
+				src.MagicPotency = rand(0,25)
 				src.Agility += 4.5
 				src.Endurance += 11
 				src.Intelligence += 5
@@ -1722,7 +1722,7 @@ mob
 				for(var/mob/M in Players)
 					if(M.Race == src.Race && M.Gender == "Female" && M.Preg == 2)
 						if(src.client.address == M.client.address && M != src)
-							world << "<font color = teal><b>([src.key])[src] - [src.OrginalName] was booted for Alt Key Interaction involving character creation!<br>"
+							world << "<font color = teal><b>([src.key])[src] - [src.OriginalName] was booted for Alt Key Interaction involving character creation!<br>"
 							del(src)
 							return
 						PlayerBorn = 1
@@ -1795,7 +1795,7 @@ mob
 					src.Weapon = H
 				src.CarpentrySkillMulti = 0.6
 				src.MiningSkillMulti = 0.4
-				src.MasonarySkillMulti = 0.6
+				src.MasonrySkillMulti = 0.6
 				src.SmeltingSkillMulti = 0.6
 				src.ForgingSkillMulti = 0.6
 				src.WoodCuttingSkillMulti = 0.8
@@ -1836,7 +1836,7 @@ mob
 				src.icon_state = "N"
 				src.PregType = "Womb"
 				src.DieAge = rand(60,80)
-				src.MagicPotentcy = rand(0,75)
+				src.MagicPotency = rand(0,75)
 				src.WeightMax = 85
 				src.Strength += 3.5
 				src.Agility += 12.5
@@ -1856,7 +1856,7 @@ mob
 				for(var/mob/M in Players)
 					if(M.Race == src.Race && M.Gender == "Female" && M.Preg == 2)
 						if(src.client.address == M.client.address && M != src)
-							world << "<font color = teal><b>([src.key])[src] - [src.OrginalName] was booted for Alt Key Interaction involving character creation!<br>"
+							world << "<font color = teal><b>([src.key])[src] - [src.OriginalName] was booted for Alt Key Interaction involving character creation!<br>"
 							del(src)
 							return
 						PlayerBorn = 1
@@ -1904,7 +1904,7 @@ mob
 
 				src.CarpentrySkillMulti = 0.4
 				src.MiningSkillMulti = 0.4
-				src.MasonarySkillMulti = 0.8
+				src.MasonrySkillMulti = 0.8
 				src.SmeltingSkillMulti = 0.6
 				src.ForgingSkillMulti = 0.6
 				src.WoodCuttingSkillMulti = 0.6
@@ -1968,7 +1968,7 @@ mob
 				src.CanRegenLimbs = 1
 				src.SwimmingSkill += 25
 				src.loc = locate(287,228,1)
-				src.MagicPotentcy = rand(0,75)
+				src.MagicPotency = rand(0,75)
 				src.WeightMax = 100
 				src.Strength += 4
 				src.Agility += 12.5
@@ -2023,7 +2023,7 @@ mob
 
 				src.CarpentrySkillMulti = 0.6
 				src.MiningSkillMulti = 0.2
-				src.MasonarySkillMulti = 0.6
+				src.MasonrySkillMulti = 0.6
 				src.SmeltingSkillMulti = 0.6
 				src.ForgingSkillMulti = 0.6
 				src.WoodCuttingSkillMulti = 0.8
@@ -2115,7 +2115,7 @@ mob
 				src.icon_state = "N"
 				src.PregType = "Womb"
 				src.DieAge = rand(90,120)
-				src.MagicPotentcy = rand(0,30)
+				src.MagicPotency = rand(0,30)
 				src.loc = locate(28,75,1)
 				src.WeightMax = 125
 				src.Strength += 12.5
@@ -2135,7 +2135,7 @@ mob
 				for(var/mob/M in Players)
 					if(M.Race == src.Race && M.Gender == "Female" && M.Preg == 2)
 						if(src.client.address == M.client.address && M != src)
-							world << "<font color = teal><b>([src.key])[src] - [src.OrginalName] was booted for Alt Key Interaction involving character creation!<br>"
+							world << "<font color = teal><b>([src.key])[src] - [src.OriginalName] was booted for Alt Key Interaction involving character creation!<br>"
 							del(src)
 							return
 						PlayerBorn = 1
@@ -2208,7 +2208,7 @@ mob
 					src.Weapon = H
 				src.CarpentrySkillMulti = 0.6
 				src.MiningSkillMulti = 0.4
-				src.MasonarySkillMulti = 0.8
+				src.MasonrySkillMulti = 0.8
 				src.SmeltingSkillMulti = 0.8
 				src.ForgingSkillMulti = 0.8
 				src.WoodCuttingSkillMulti = 0.8
@@ -2246,7 +2246,7 @@ mob
 				src.PregType = "Womb"
 				src.WeightMax = 150
 				src.DieAge = rand(80,120)
-				src.MagicPotentcy = rand(0,85)
+				src.MagicPotency = rand(0,85)
 				src.Strength += 7.5
 				src.Agility += 7.5
 				src.Endurance += 4
@@ -2286,7 +2286,7 @@ mob
 				src.ShieldSkillMulti = 0.2
 				src.CarpentrySkillMulti = 0.2
 				src.MiningSkillMulti = 0.2
-				src.MasonarySkillMulti = 0.2
+				src.MasonrySkillMulti = 0.2
 				src.SmeltingSkillMulti = 0.2
 				src.ForgingSkillMulti = 0.2
 				src.WoodCuttingSkillMulti = 0.4
@@ -2311,7 +2311,7 @@ mob
 				for(var/mob/M in Players)
 					if(M.Race == src.Race && M.Gender == "Female" && M.Preg == 2)
 						if(src.client.address == M.client.address && M != src)
-							world << "<font color = teal><b>([src.key])[src] - [src.OrginalName] was booted for Alt Key Interaction involving character creation!<br>"
+							world << "<font color = teal><b>([src.key])[src] - [src.OriginalName] was booted for Alt Key Interaction involving character creation!<br>"
 							del(src)
 							return
 						src.Strength += M.Strength / 8
@@ -2343,7 +2343,7 @@ mob
 				src.PregType = "Egg"
 				src.WeightMax = 100
 				src.DieAge = rand(75,100)
-				src.MagicPotentcy = rand(0,101)
+				src.MagicPotency = rand(0,101)
 				src.Strength += 8.5
 				src.Agility += 11
 				src.Endurance += 3.75
@@ -2432,7 +2432,7 @@ mob
 					src.Weapon = S
 				src.CarpentrySkillMulti = 1
 				src.MiningSkillMulti = 0.2
-				src.MasonarySkillMulti = 0.8
+				src.MasonrySkillMulti = 0.8
 				src.SmeltingSkillMulti = 0.8
 				src.ForgingSkillMulti = 0.8
 				src.WoodCuttingSkillMulti = 1
@@ -2466,7 +2466,7 @@ mob
 				for(var/mob/M in Players)
 					if(M.Race == src.Race && M.Gender == "Female" && M.Preg == 2)
 						if(src.client.address == M.client.address && M != src)
-							world << "<font color = teal><b>([src.key])[src] - [src.OrginalName] was booted for Alt Key Interaction involving character creation!<br>"
+							world << "<font color = teal><b>([src.key])[src] - [src.OriginalName] was booted for Alt Key Interaction involving character creation!<br>"
 							del(src)
 							return
 						PlayerBorn = 1
@@ -2607,7 +2607,7 @@ mob
 				src.PregType = "Womb"
 				src.WeightMax = 100
 				src.DieAge = rand(65,90)
-				src.MagicPotentcy = rand(0,100)
+				src.MagicPotency = rand(0,100)
 				src.Strength += 5
 				src.Agility += 5
 				src.Endurance += 5
@@ -2646,7 +2646,7 @@ mob
 				src.ShieldSkillMulti = 0.4
 				src.CarpentrySkillMulti = 1
 				src.MiningSkillMulti = 0.2
-				src.MasonarySkillMulti = 0.8
+				src.MasonrySkillMulti = 0.8
 				src.SmeltingSkillMulti = 0.8
 				src.ForgingSkillMulti = 0.8
 				src.WoodCuttingSkillMulti = 1
@@ -2698,7 +2698,7 @@ mob
 			for(var/obj/HUD/Text/T in src.client.screen)
 				del(T)
 			for(var/obj/HUD/RaceSelection/S in src.client.screen)
-				if(S.Type != "DontChange")
+				if(S.Type != "DoNotChange")
 					S.icon_state = "[S.Type] off"
 			src.Gender = null
 			src.Race = null
@@ -3473,7 +3473,7 @@ mob
 			if(src.Type >= 2)
 				view(src) << "<font color =purple>[src] gurgles and splutters violently then spits out a large sack of goo, the sack lands on the ground and begins to harden!<br>"
 				src.Type -= 2
-				var/mob/NPC/Evil/Undead/Corpse_Devourer_Cacoon/C = new
+				var/mob/NPC/Evil/Undead/Corpse_Devourer_Cocoon/C = new
 				C.Owner = src.Owner
 				C.Move(src.loc)
 			if(src.Target == null)
@@ -3528,7 +3528,7 @@ mob
 									if(src)
 										del(src)
 								return
-		DevourerCacoonHatch()
+		DevourerCocoonHatch()
 			spawn(5000)
 				if(src)
 					view(src) << "<font color = red>[src] begins to stir with life...<br>"
@@ -4517,7 +4517,7 @@ mob
 							src.Endurance = src.Endurance / 2
 							src.CanEat = 0
 <<<<<<< Updated upstream
-							src << "<font color = purple>[src]'s stomach gurgles and splutters before exspelling itself out of [src]'s mouth in a liquidated form! They seem alot weaker now!<br>"
+							src << "<font color = purple>[src]'s stomach gurgles and splutters before exspelling itself out of [src]'s mouth in a liquidated form! They seem a lot weaker now!<br>"
 =======
 							src << "<font color = purple>[src]'s stomach gurgles and splutters before it expels out of [src]'s mouth in a putrefied form! They seem a lot weaker, now!<br>"
 >>>>>>> Stashed changes
@@ -4573,7 +4573,7 @@ mob
 					if(src.Admin)
 						ShowRace = "- [M.Race]"
 						ShowIP = "- [M.client.address]"
-					src << "([M.key])[M] - [M.OrginalName][ShowRace][ShowIP]"
+					src << "([M.key])[M] - [M.OriginalName][ShowRace][ShowIP]"
 					Num += 1
 			src << "Total - [Num]"
 			return
@@ -4970,7 +4970,7 @@ mob
 			src.client.screen += Heal
 			src.client.screen += ServerOptions
 			src.client.screen += GiveAdmin
-		CreateMasonaryMenu(var/obj/Stone)
+		CreateMasonryMenu(var/obj/Stone)
 			src.DeleteInventoryMenu()
 			src.InvenUp = 0
 			var/obj/H = new/obj/HUD/Menus/Inventory/Middle(src.client)
@@ -4982,7 +4982,7 @@ mob
 			var/obj/E = new/obj/HUD/Menus/Inventory/BottomMiddle(src.client)
 			var/obj/F = new/obj/HUD/Menus/Inventory/LeftMiddle(src.client)
 			var/obj/G = new/obj/HUD/Menus/Inventory/RightMiddle(src.client)
-			var/obj/Cl = new/obj/HUD/Menus/Inventory/CloseMasonary(src.client)
+			var/obj/Cl = new/obj/HUD/Menus/Inventory/CloseMasonry(src.client)
 			H.screen_loc = "2,2 to 12,10"
 			O.screen_loc = "2,10"
 			A.screen_loc = "12,10"
@@ -5003,16 +5003,16 @@ mob
 			src.client.screen += F
 			src.client.screen += G
 			src.client.screen += Cl
-			H.Type = "Masonary"
-			O.Type = "Masonary"
-			A.Type = "Masonary"
-			B.Type = "Masonary"
-			C.Type = "Masonary"
-			D.Type = "Masonary"
-			E.Type = "Masonary"
-			F.Type = "Masonary"
-			G.Type = "Masonary"
-			src.Text("Masonary",src,4,10,0,10,"--Masonary Menu--")
+			H.Type = "Masonry"
+			O.Type = "Masonry"
+			A.Type = "Masonry"
+			B.Type = "Masonry"
+			C.Type = "Masonry"
+			D.Type = "Masonry"
+			E.Type = "Masonry"
+			F.Type = "Masonry"
+			G.Type = "Masonry"
+			src.Text("Masonry",src,4,10,0,10,"--Masonry Menu--")
 			var/X = 3
 			var/Y = 9
 			if(Stone)
@@ -6153,7 +6153,7 @@ mob
 			src.Text("SkillDisplay",src,2,4,10,14,"Smelting-[src.SmeltingSkill]")
 			src.Text("SkillDisplay",src,2,3,10,14,"FirstAid-[src.FirstAidSkill]")
 			src.Text("SkillDisplay",src,6,13,10,14,"Forging-[src.ForgingSkill]")
-			src.Text("SkillDisplay",src,6,12,10,14,"Masonary-[src.MasonarySkill]")
+			src.Text("SkillDisplay",src,6,12,10,14,"Masonry-[src.MasonrySkill]")
 			src.Text("SkillDisplay",src,6,11,10,14,"Cooking-[src.CookingSkill]")
 			src.Text("SkillDisplay",src,6,10,10,14,"Fishing-[src.FishingSkill]")
 			src.Text("SkillDisplay",src,6,9,10,14,"Alchemy-[src.AlchemySkill]")
@@ -6786,7 +6786,7 @@ mob
 				G.name = "[G.Type] [G.name]"
 				G.icon_state = "gold coin >100"
 				SaveMap()
-				src << "<font color = teal>You have been granted the Rank of Human Priest of Order. Your Job will be to Role Play a high ranking Monk, making sure that no harm comes to anyone involved with the Human Empire, or the Inquisition. The King and Queen of the Human Empire know of you. You have been granted a full set of Priest Armour, and a Priest Staff, and also a very powerful Book of Order. You must never, ever, give this book to anyone, not even the King or Queen, the same goes for your armour. They belong to you, and they belong to the God of Order. If there is no offical King or Queen, the Priest rules in place, however, the Priest is never higher rank than the King and Queen, and as such, can not overule any orders that they give. You must be a Good Person, and not Evil, however, you are allowed to be Paranoid. If you suspect someone of being Evil, you can Torture them until they admit to wrong doings or Evil involement, but this all requires good RP reasons, ect. The Book of Order can Revive NPC and Players, but each time you use it, you Must Role Play doing so. Breaking any of the previously mentioned requirements or rules that involve the Priest Rank, will get you stripped of said Rank or even Ban. Your character now has knowledge of all Undead creatures, and also where the Undead lands are, ect. You also know of Demons, and all Gods, as well as any and all Evil Relics, Artifacts, or Books. You have also learned alot of the Ancient Language, from old Scrolls and Books, and have been given a Plus 15 Intelligence boost to help you learn other Languages faster. You've also been given a special key to un-lock the Inquisitor Artifact Vault. You are NOT to take ANYTHING from this vault without having both a Good Role Play Reason and having asked an Admin first. The vaults location is in the bottom of the Inquisitor Tower and is mainly used to lock away dangerous things.<br>"
+				src << "<font color = teal>You have been granted the Rank of Human Priest of Order. Your Job will be to Role Play a high ranking Monk, making sure that no harm comes to anyone involved with the Human Empire, or the Inquisition. The King and Queen of the Human Empire know of you. You have been granted a full set of Priest Armour, and a Priest Staff, and also a very powerful Book of Order. You must never, ever, give this book to anyone, not even the King or Queen, the same goes for your armour. They belong to you, and they belong to the God of Order. If there is no offical King or Queen, the Priest rules in place, however, the Priest is never higher rank than the King and Queen, and as such, can not overule any orders that they give. You must be a Good Person, and not Evil, however, you are allowed to be Paranoid. If you suspect someone of being Evil, you can Torture them until they admit to wrong doings or Evil involement, but this all requires good RP reasons, ect. The Book of Order can Revive NPC and Players, but each time you use it, you Must Role Play doing so. Breaking any of the previously mentioned requirements or rules that involve the Priest Rank, will get you stripped of said Rank or even Ban. Your character now has knowledge of all Undead creatures, and also where the Undead lands are, ect. You also know of Demons, and all Gods, as well as any and all Evil Relics, Artifacts, or Books. You have also learned a lot of the Ancient Language, from old Scrolls and Books, and have been given a Plus 15 Intelligence boost to help you learn other Languages faster. You've also been given a special key to un-lock the Inquisitor Artifact Vault. You are NOT to take ANYTHING from this vault without having both a Good Role Play Reason and having asked an Admin first. The vaults location is in the bottom of the Inquisitor Tower and is mainly used to lock away dangerous things.<br>"
 				world << "<font color = yellow>All around the Human kingdom people far and wide begin to hear of a ceremony. A new Priest of Order had been selected by ancient Decree and instated with the responsibility of ruling the Inquisition and even the entire Human Empire when needed. Word of this slowly spreads outside of the Humans lands as both ally and enemy hear the news."
 			if(Rank == "Diplomat")
 				src.LangKnow = null
@@ -6973,7 +6973,7 @@ mob
 						Wep.EquipState = "Corrupted bow equip"
 				var/WepName=input(src,"Name your weapon.")as text
 				Wep.name = WepName
-				src << "<font color = teal>You have been Granted the Rank of Weapon Master, this Rank has no True Static Purpose, you could choose to be a Teacher, Hermit, General, Leader, Villian, anything you desire, but you cant instantly use your skills to attack any of the Kings/Queens directly until Year 15+, if you attempt to, you will be Stripped of your Rank and Deducted. You have also been granted a +5 in Strength, Endurance, and Agility. You are now Twenty Five(25) Years older than before, and you will now live +5 more Years longer than your Average Race. No one knows of you ICly.<br>"
+				src << "<font color = teal>You have been Granted the Rank of Weapon Master, this Rank has no True Static Purpose, you could choose to be a Teacher, Hermit, General, Leader, Villian, anything you desire, but you cannot instantly use your skills to attack any of the Kings/Queens directly until Year 15+, if you attempt to, you will be Stripped of your Rank and Deducted. You have also been granted a +5 in Strength, Endurance, and Agility. You are now Twenty Five(25) Years older than before, and you will now live +5 more Years longer than your Average Race. No one knows of you ICly.<br>"
 			if(Rank == "King/Queen")
 				var/list/kingdom = new()
 				kingdom += "Human Kingdom"
